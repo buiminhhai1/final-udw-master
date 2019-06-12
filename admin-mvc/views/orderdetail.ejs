@@ -10,7 +10,75 @@
     
 	 <div id="wrapper">
           <%include sidebar%>
-		
+		<div class="content-wrapper">
+                <div class="content custom-scrollbar">
+
+                    <div id="e-commerce-orders" class="page-layout carded full-width">
+                                           
+                   <!-- / body -->
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col-12">
+									<form class="my-form">
+										<script>
+											$(document).ready(function() {
+												$('#example').DataTable(); <!-- chỉnh css cho nó là xong  -->
+											} );
+										</script>	
+										<table id="example" class="table " style="width:100%">
+											<thead class="my-title-table">
+												<tr>
+													<th>Mã Đơn Hàng</th>
+													<th>Mã Sản Phẩm</th>
+													<td>Tên Sản Phẩm</td>
+													<th>Đơn Giá</th>
+													<th>Số Lượng</th>
+													<th>Tổng tiền</th>														
+													<th>Sửa</th>
+													<th>Xóa</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>DH01</td>
+													<td>SP01</td>
+													<td>Laptop abcxyz</td>
+													<td>1.000.000d</td>
+													<td>1</td>
+													<td>1.000.000d</td>
+													<td>
+														<button type="button" class="btn btn-info btn-lg">Chỉnh Sửa</button>
+													</td>
+													<td>
+														<button type="button" class="btn btn-danger btn-lg">Xóa</button>
+													</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<th>Mã Đơn Hàng</th>
+													<th>Mã Sản Phẩm</th>
+													<td>Tên Sản Phẩm</td>
+													<th>Đơn Giá</th>
+													<th>Số Lượng</th>
+													<th>Tổng tiền</th>
+													<th>Sửa</th>
+													<th>Xóa</th>
+												</tr>
+											</tfoot>
+										</table>
+								
+									</form>
+								</div>
+							</div>
+						</div>
+						<!-- enđ body -->
+                    </div>
+
+                    <script type="text/javascript" src="../assets/js/apps/e-commerce/orders/orders.js"></script>
+
+                </div>
+            </div>
  
  
 	<div class="quick-panel-sidebar custom-scrollbar" fuse-cloak data-fuse-bar="quick-panel-sidebar" data-fuse-bar-position="right">
