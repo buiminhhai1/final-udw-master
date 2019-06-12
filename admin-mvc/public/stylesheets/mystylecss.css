@@ -1,0 +1,35 @@
+.mycustom-title{
+	margin-left: 30px;
+}
+.my-image-style{
+	width: 50px;
+}
+.my-name-user{
+	margin-left: 30px;
+}
+.my-form{
+	margin-left: 30px;
+}
+.my-button{
+	height: 40px !important;
+	width: auto !important;
+	margin-left:10px !important;
+	margin-right:30px !important;
+}
+.my-ul{
+	font-size: 14px !important;
+	
+}
+.my-icon{
+	margin-left:-15px !important;
+	padding-left: 0px !important;
+	margin-right: 20px !important;
+}
+.my-title-table{
+	background-color: white !important;
+	vertical-align: middle!important;
+}
+
+.my-table{
+	
+}

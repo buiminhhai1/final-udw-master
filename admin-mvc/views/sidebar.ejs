@@ -1,0 +1,128 @@
+<link type="text/css" rel="stylesheet" href="../stylesheets/mystylecss.css">
+			
+			
+			<aside id="aside" class="aside aside-left" data-fuse-bar="aside" data-fuse-bar-media-step="md" data-fuse-bar-position="left">
+                <div class="aside-content bg-primary-700 text-auto">
+
+                    <div class="aside-toolbar">
+
+                        <div class="logo">
+							<i class="icon-view-dashboard my-icon"></i>
+                            <span class="logo-text">Dashboard</span>
+                        </div>
+
+                        <button id="toggle-fold-aside-button" type="button" class="btn btn-icon d-none d-lg-block fuse-ripple-ready" data-fuse-aside-toggle-fold="">
+                            <i class="icon icon-backburger"></i>
+                        </button>
+
+                    </div>
+
+                    <ul class="my-ul nav flex-column custom-scrollbar ps ps--active-y" id="sidenav" data-children=".nav-item">
+                        <li class="nav-item" role="tab" id="heading-ecommerce">
+                            <a class="nav-link ripple with-arrow collapsed fuse-ripple-ready" data-toggle="collapse" data-target="#collapse-ecommerce" href="#" aria-expanded="false" aria-controls="collapse-ecommerce" data-parent="#sidenav">
+
+                                <i class="icon-settings-box"></i>
+                                <span>Quản lý tài khoản</span>
+                            </a>
+                            <ul id="collapse-ecommerce" class="collapse " role="tabpanel" aria-labelledby="heading-ecommerce" data-children=".nav-item">
+
+                                <li class="nav-item">
+                                    <a class="nav-link ripple" href="userlist">
+                                        <span>Danh sách tài khoản</span>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link ripple fuse-ripple-ready" href="userdetail" data-url="apps-chat">
+
+                                        <span>Cập nhật thông tin tài khoản</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+						
+						<li class="nav-item" role="tab" id="heading-a">
+
+                            <a class="nav-link ripple with-arrow collapsed fuse-ripple-ready" data-toggle="collapse" data-target="#collapse-products" href="#" aria-expanded="false" aria-controls="collapse-products" data-parent="#sidenav">
+
+                                <i class="icon-cart"></i>
+
+                                <span>Quản lý sản phẩm</span>
+                            </a>
+                            <ul id="collapse-products" class="collapse " role="tabpanel" aria-labelledby="heading-ecommerce" data-children=".nav-item">
+
+                                <li class="nav-item">
+                                    <a class="nav-link ripple fuse-ripple-ready" href="products" data-url="apps-chat">
+
+                                        <span>Danh sách sản phẩm</span>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link ripple fuse-ripple-ready" href="productdetail" data-url="apps-chat">
+
+                                        <span>Loại sản phẩm</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+						
+						
+						<li class="nav-item" role="tab" id="heading-ecommerce">
+
+                            <a class="nav-link ripple with-arrow collapsed fuse-ripple-ready" data-toggle="collapse" data-target="#collapse-orders" href="#" aria-expanded="false" aria-controls="collapse-orders" data-parent="#sidenav">
+
+                                <i class="icon-shopping"></i>
+
+                                <span>Quản lý đơn hàng</span>
+                            </a>
+                            <ul id="collapse-orders" class="collapse " role="tabpanel" aria-labelledby="heading-ecommerce" data-children=".nav-item">
+
+                                <li class="nav-item">
+                                    <a class="nav-link ripple fuse-ripple-ready" href="orders" data-url="apps-chat">
+
+                                        <span>Danh sách đơn hàng</span>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link ripple fuse-ripple-ready" href="orderdetail" data-url="apps-chat">
+
+                                        <span>Chi tiết đơn hàng</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+						
+						<li class="nav-item" role="tab" id="heading-ecommerce">
+
+                            <a class="nav-link ripple with-arrow collapsed fuse-ripple-ready" data-toggle="collapse" data-target="#collapse-statistics" href="#" aria-expanded="false" aria-controls="collapse-statistics" data-parent="#sidenav">
+
+                                <i class="icon-file-document-box"></i>
+                                <span>Thống kê</span>
+                            </a>
+                            <ul id="collapse-statistics" class="collapse " role="tabpanel" aria-labelledby="heading-ecommerce" data-children=".nav-item">
+
+                                <li class="nav-item">
+                                    <a class="nav-link ripple fuse-ripple-ready" href="salesfigures">
+                                        <span>Thống kê doanh thu</span>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link ripple fuse-ripple-ready" href="top10">
+                                        <span>Top 10 sản phẩm</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                    </ul>    
+
+                    <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; height: 407px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 108px;"></div></div></ul>
+                </div>
+
+            </aside>
