@@ -10,12 +10,49 @@
    
         <div id="wrapper">
             <%include sidebar%>
-    	
+    		<!-- / body -->
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col-12">
+									<form class="my-form">
+										<script>
+											$(document).ready(function() {
+												$('#example').DataTable(); <!-- chỉnh css cho nó là xong  -->
+											} );
+										</script>	
+										<table id="example" class="table " style="width:100%">
+											<thead class="my-title-table">
+												<tr>
+													<th>Mã Sản Phẩm</th>
+													<th>Tên</th>
+													<th>Giá</th>
+													<th>Hình</th>
+												
+												</tr>
+											</thead>
+											<tbody>
+																			
+											</tbody>
+											<tfoot>
+												<tr>
+													<th>Mã Sản Phẩm</th>
+													<th>Tên</th>
+													<th>Giá</th>
+													<th>Hình</th>
+																									</tr>
+											</tfoot>
+										</table>
+								
+									</form>
+								</div>
+							</div>
+						</div>
+						<!-- enđ body -->
 		</div>
-		   
-		   
+		
 		   <div class="quick-panel-sidebar custom-scrollbar" fuse-cloak data-fuse-bar="quick-panel-sidebar" data-fuse-bar-position="right">
-                <div class="list-group" class="date">
+                
+				<div class="list-group" class="date">
 
                     <div class="list-group-item subheader">TODAY</div>
 
