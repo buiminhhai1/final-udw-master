@@ -13,7 +13,7 @@
 		  <div class="content-wrapper">
                 <div class="content custom-scrollbar">
 
-                    <div id="e-commerce-orders" class="page-layout carded full-width">
+                    <div >
                                            
                    <!-- / body -->
 						<div class="container-fluid">
@@ -33,25 +33,37 @@
 													<td>CMND</td>
 													<th>Ngày mua</th>
 													<th>Tổng tiền</th>												
+													<th>Chi Tiết</th>
 													<th>Sửa</th>
-													<th>Xóa</th>
 												</tr>
 											</thead>
 											<tbody>
-												<tr>
-													<td>DH01</td>
-													<td>Lý Trường Thanh Giang</td>
-													<td>273591470</td>
-													<td>21/03/2019</td>
-													<td>10.000.000đ</td>
-													<td>
-														<button type="button" class="btn btn-info btn-lg">Chỉnh Sửa</button>
-													</td>
-													<td>
-														<button type="button" class="btn btn-danger btn-lg">Xóa</button>
-													</td>
-												</tr>
+
+												<% orders.forEach(function(p){ %>
+
+                                                    <tr>
+                                                    <td><%= p.MaDonHang%></td>
+                                                    <td><%= p.Owner%></td>                                             
+                                                    <td><%= p.CMND%></td>
+                                                    <td><%= p.NgayMua%></td>
+                                                    <td><%= p.TongTien%></td>
+                                                    
+                                                    <td>
+                                                         <button onclick="location.href='/admin/orders/<%=p._id%>'" 
+                                                        type="button" class="btn btn-info btn-lg">
+                                                            Xem Chi Tiết
+                                                        </button>
+                                                    </td>
+                                                    <td>
+                                                        <button onclick="location.href='http://www.example.com'" 
+                                                        type="button" class="btn btn-info btn-lg">
+                                                            Chỉnh sửa
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <% }); %>
 											</tbody>
+                                            <!--
 											<tfoot>
 												<tr>
 													<th>Mã Đơn Hàng</th>
@@ -63,6 +75,7 @@
 													<th>Xóa</th>
 												</tr>
 											</tfoot>
+                                        -->
 										</table>
 								
 									</form>
@@ -72,7 +85,7 @@
 						<!-- enđ body -->
                     </div>
 
-                    <script type="text/javascript" src="../assets/js/apps/e-commerce/orders/orders.js"></script>
+                    <script type="text/javascript" base src="/assets/js/apps/e-commerce/orders/orders.js"></script>
 
                 </div>
             </div>

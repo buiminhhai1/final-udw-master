@@ -3,18 +3,33 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var mongoose = require('mongoose');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var userlistRouter = require('./controllers/userlist');
-var userdetailRouter = require('./controllers/userdetail');
-var orderRouter = require('./controllers/order');
-var orderdetailRouter = require('./controllers/orderdetail');
-var productRouter = require('./controllers/product');
-var productdetailRouter = require ('./controllers/productdetail');
-var salesconfigureRouter = require ('./controllers/salesfigure');
-var top10Router = require ('./controllers/top10');
+var adminRouter = require('./routes/admin');
+var catalogRouter = require('./routes/catalog');
 var app = express();
+
+var uri = "mongodb+srv://thanhhai430:thanhhai430@cluster0-onyhg.mongodb.net/WebDB";
+mongoose.connect(uri, {useNewUrlParser: true});
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+  console.log("database connected");
+});
+ 
+// db.collection("DonHang").insertOne({
+// 	MaDonHang: 'DH',
+//     Owner: 'NguyenVanH',
+//     CMND: 'String',
+//     NgayMua: 'String',
+//     TongTien: 'String'
+    
+// }, function(err, result) {
+//     if (err) throw err;
+//     console.log(result);
+//     db.close();
+//   });
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -28,15 +43,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/',userlistRouter);
-app.use('/',userdetailRouter);
-app.use('/',orderRouter);
-app.use('/',orderdetailRouter);
-app.use('/',productRouter);
-app.use('/', productdetailRouter);
-app.use('/',salesconfigureRouter);
-app.use('/',top10Router);
+app.use('/admin', adminRouter);
+app.use('/catalog', catalogRouter);
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

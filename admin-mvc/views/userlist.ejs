@@ -31,27 +31,37 @@
 													<th>Địa chỉ</th>
 													<th>SĐT</th>
 													<th>Hình</th>
-													<th>Tên tài khoản</th>
-													<th>Sửa</th>
-													<th>Xóa</th>
+													<!--<th>Tên tài khoản</th>-->
+													<th>Xem Chi Tiết</th>
+													<th>Chỉnh Sửa</th>
 												</tr>
 											</thead>
 											<tbody>
-												<tr>
-													<th>Bùi Minh Hải</th>
-													<th>02/02/1997</th>
-													<th>quận 4, tp Hồ Chí Minh</th>
-													<th>0372343546</th>
-													<th></th>
-													<th></th>
-													<td>
-														<button type="button" class="btn btn-info btn-lg">Chỉnh Sửa</button>
-													</td>
-													<td>
-														<button type="button" class="btn btn-danger btn-lg">Xóa</button>
-													</td>
-												</tr>
+												<% users.forEach(function(p){ %>
+
+                                                    <tr>
+                                                    <td><%= p.Ten%></td>
+                                                    <td><%= p.NgaySinh%></td>                  	                          
+                                                    <td><%= p.DiaChi%></td>
+                                                    <td><%= p.SDT%></td>
+                                                    <td><img src="<%= p.Hinh%>" height="100px" width="100px"></td>
+                                                    
+                                                    <td>
+                                                         <button onclick="location.href='/admin/users/<%=p._id%>'" 
+                                                        type="button" class="btn btn-info btn-lg">
+                                                            Xem Chi Tiết
+                                                        </button>
+                                                    </td>
+                                                    <td>
+                                                        <button onclick="location.href='http://www.example.com'" 
+                                                        type="button" class="btn btn-info btn-lg">
+                                                            Chỉnh sửa
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <% }); %>
 											</tbody>
+											<!--
 											<tfoot>
 												<tr>
 													<th>Tên</th>
@@ -64,6 +74,7 @@
 													<th>Xóa</th>
 												</tr>
 											</tfoot>
+										-->
 										</table>
 								
 									</form>
@@ -73,7 +84,7 @@
 						<!-- enđ body --> 
                     
 
-                <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; height: 471px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 325px;"></div></div></div>
+                <!-- <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; height: 471px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 325px;"></div></div></div> -->
             </div>
 		</div>
 		 
