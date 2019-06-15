@@ -19,4 +19,9 @@ exports.login = function(req, res, next) {
 	res.render('admin/login', { title: 'Express'});
 	
 };
+exports.register = function(req, res, next) {
+    
+	res.render('admin/register', { title: 'Express'});
+	
+};
 

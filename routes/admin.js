@@ -8,10 +8,9 @@ var salesfigureController = require('../controllers/admin/salesfigureController'
 var top10Controller = require('../controllers/admin/top10Controller');
 
 
-
 router.get('/', userController.userlist);  
 router.get('/login', userController.login);  
-
+router.get('/register', userController.register); 
 
 router.get('/users',userController.userlist);
 router.get('/users/:id',userController.userdetail);
