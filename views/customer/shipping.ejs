@@ -1,0 +1,480 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bootshop online Shopping cart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <%include head%>
+    
+  </head>
+<body>
+<%include header%>
+<!-- Header End====================================================================== -->
+<div id="mainBody">
+	<div class="container">
+	<div class="row">
+<!-- Sidebar ================================================== -->
+
+
+<!-- Sidebar end=============================================== -->
+<div class="span9">
+    <ul class="breadcrumb">
+		<li><a href="index">Home</a> <span class="divider">/</span></li>
+		<li class="active">Shipping</li>
+    </ul>
+	<h3> Delivery address</h3>	
+	<div class="well">
+	<div class="container">
+      
+<!-- Flash message -->
+<!-- End flash message -->
+
+
+<div class="panel-body">
+    <form class="form-horizontal bv-form" role="form" id="address-info" novalidate="novalidate"><button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
+        <div class="form-group row">
+            <label for="full_name" class="col-lg-4 control-label visible-lg-block">Name </label>
+            <div class="col-lg-8 input-wrap has-feedback has-error">
+                <input type="text" name="full_name" class="form-control address" id="full_name" value="" placeholder="Input your name" data-bv-field="full_name"><i class="form-control-feedback bv-no-label fa fa-times" data-bv-icon-for="full_name" style="display: block;"></i>
+            <small class="help-block" data-bv-validator="notEmpty" data-bv-for="full_name" data-bv-result="INVALID" style="display: block;"></small></div>
+        </div>
+
+        <div class="form-group row">
+            <label for="telephone" class="col-lg-4 control-label visible-lg-block">Phone number</label>
+            <div class="col-lg-8 input-wrap has-feedback">
+                <input type="tel" name="telephone" class="form-control address" id="telephone" value="" placeholder="Input your phone" data-bv-field="telephone"><i class="form-control-feedback bv-no-label" data-bv-icon-for="telephone" style="display: none;"></i>
+            <small class="help-block" data-bv-validator="notEmpty" data-bv-for="telephone" data-bv-result="NOT_VALIDATED" style="display: none;">Vuidsfds lòng nhập Số điện thoại</small><small class="help-block" data-bv-validator="regexp" data-bv-for="telephone" data-bv-result="NOT_VALIDATED" style="display: none;">Số điện thoại không hợp lệ (chỉ chấp nhận số)</small><small class="help-block" data-bv-validator="stringLength" data-bv-for="telephone" data-bv-result="NOT_VALIDATED" style="display: none;">Số điện thoại chỉ được chứa 10 chữ số</small></div>
+        </div>
+
+        
+        <div class="form-group row" >
+            <label for="country_id" class="col-lg-4 control-label visible-lg-block">Country</label>
+            <div class="col-lg-8 input-wrap">
+                <select name="country_id" class="form-control address" id="country_id" >
+                        <option value="">Select your country</option>
+                                                    <option value="VN" selected="">Việt Nam                            </option>
+                                                    <option value="AU">Úc                            </option>
+                                                    <option value="US">Hoa Kỳ                            </option>
+                                                    <option value="AD">Andorra                            </option>
+                                                    <option value="AE">Các Tiểu Vương quốc A-rập Thống nhất                            </option>
+                                                    <option value="AF">Afghanistan                            </option>
+                                                    <option value="AG">Antigua và Barbuda                            </option>
+                                                    <option value="AI">Anguilla                            </option>
+                                                    <option value="AL">Albani                            </option>
+                                                    <option value="AM">Armenia                            </option>
+                                                    <option value="AN">Tây Ấn Hà Lan                            </option>
+                                                    <option value="AO">Angola                            </option>
+                                                    <option value="AQ">Nam Cực                            </option>
+                                                    <option value="AR">Argentina                            </option>
+                                                    <option value="AS">Đảo Somoa thuộc Mỹ                            </option>
+                                                    <option value="AT">Áo                            </option>
+                                                    <option value="AW">Aruba                            </option>
+                                                    <option value="AX">Quần đảo Aland                            </option>
+                                                    <option value="AZ">Azerbaijan                            </option>
+                                                    <option value="BA">Bô-xni-a Héc-xê-gô-vi-na                            </option>
+                                                    <option value="BB">Barbados                            </option>
+                                                    <option value="BD">Bangladesh                            </option>
+                                                    <option value="BE">Bỉ                            </option>
+                                                    <option value="BF">Burkina Faso                            </option>
+                                                    <option value="BG">Bungari                            </option>
+                                                    <option value="BH">Bahrain                            </option>
+                                                    <option value="BI">Burundi                            </option>
+                                                    <option value="BJ">Benin                            </option>
+                                                    <option value="BL">Saint Barthélemy                            </option>
+                                                    <option value="BM">Bermuda                            </option>
+                                                    <option value="BN">Brunei                            </option>
+                                                    <option value="BO">Bolivia                            </option>
+                                                    <option value="BR">Bra-xin                            </option>
+                                                    <option value="BS">Bahamas                            </option>
+                                                    <option value="BT">Bhutan                            </option>
+                                                    <option value="BV">Đảo Bouvet                            </option>
+                                                    <option value="BW">Botswana                            </option>
+                                                    <option value="BY">Belarus                            </option>
+                                                    <option value="BZ">Bê-li-xê                            </option>
+                                                    <option value="CA">Ca-na-đa                            </option>
+                                                    <option value="CC">Quần đảo Cocos                            </option>
+                                                    <option value="CD">Congo - Kinshasa                            </option>
+                                                    <option value="CF">Cộng hòa Trung Phi                            </option>
+                                                    <option value="CG">Công-gô                            </option>
+                                                    <option value="CH">Thụy Sĩ                            </option>
+                                                    <option value="CI">Bờ Biển Ngà                            </option>
+                                                    <option value="CK">Quần Đảo Cook                            </option>
+                                                    <option value="CL">Chile                            </option>
+                                                    <option value="CM">Ca-mơ-run                            </option>
+                                                    <option value="CN">Trung Quốc                            </option>
+                                                    <option value="CO">Colombia                            </option>
+                                                    <option value="CR">Cốt-xta Ri-ca                            </option>
+                                                    <option value="CU">Cu Ba                            </option>
+                                                    <option value="CV">Cape Verde                            </option>
+                                                    <option value="CX">Đảo Giáng Sinh                            </option>
+                                                    <option value="CY">Síp                            </option>
+                                                    <option value="CZ">Cộng hòa Séc                            </option>
+                                                    <option value="DE">Đức                            </option>
+                                                    <option value="DJ">Djibouti                            </option>
+                                                    <option value="DK">Đan Mạch                            </option>
+                                                    <option value="DM">Dominica                            </option>
+                                                    <option value="DO">Cộng hòa Dominica                            </option>
+                                                    <option value="DZ">Algeria                            </option>
+                                                    <option value="EC">Ecuador                            </option>
+                                                    <option value="EE">Estonia                            </option>
+                                                    <option value="EG">Ai Cập                            </option>
+                                                    <option value="EH">Tây Sahara                            </option>
+                                                    <option value="ER">Eritrea                            </option>
+                                                    <option value="ES">Tây Ban Nha                            </option>
+                                                    <option value="ET">Ethiopia                            </option>
+                                                    <option value="FI">Phần Lan                            </option>
+                                                    <option value="FJ">Fiji                            </option>
+                                                    <option value="FK">Quần Đảo Falkland                            </option>
+                                                    <option value="FM">Micronesia                            </option>
+                                                    <option value="FO">Quần Đảo Faroe                            </option>
+                                                    <option value="FR">Pháp                            </option>
+                                                    <option value="GA">Gabon                            </option>
+                                                    <option value="GB">Vương quốc Anh                            </option>
+                                                    <option value="GD">Grenada                            </option>
+                                                    <option value="GE">Georgia                            </option>
+                                                    <option value="GF">Quiana thuộc Pháp                            </option>
+                                                    <option value="GG">Guernsey                            </option>
+                                                    <option value="GH">Ghana                            </option>
+                                                    <option value="GI">Gibraltar                            </option>
+                                                    <option value="GL">Băng Đảo                            </option>
+                                                    <option value="GM">Gambia                            </option>
+                                                    <option value="GN">Guinea                            </option>
+                                                    <option value="GP">Guadeloupe                            </option>
+                                                    <option value="GQ">Guinea Xích Đạo                            </option>
+                                                    <option value="GR">Hy Lạp                            </option>
+                                                    <option value="GS">Quần đảo Nam Georgia và Nam Sandwich                            </option>
+                                                    <option value="GT">Goa-tê-ma-la                            </option>
+                                                    <option value="GU">Guam                            </option>
+                                                    <option value="GW">Guinea-Bissau                            </option>
+                                                    <option value="GY">Guyana                            </option>
+                                                    <option value="HK">Đặc khu hành chính Hồng Kông thuộc CHND Trung Hoa                            </option>
+                                                    <option value="HM">Đảo Heard và Quần đảo McDonald                            </option>
+                                                    <option value="HN">Hôn-đu-rát                            </option>
+                                                    <option value="HR">Croatia                            </option>
+                                                    <option value="HT">Haiti                            </option>
+                                                    <option value="HU">Hungari                            </option>
+                                                    <option value="ID">Indonesia                            </option>
+                                                    <option value="IE">Ai-len                            </option>
+                                                    <option value="IL">Israel                            </option>
+                                                    <option value="IM">Đảo Man                            </option>
+                                                    <option value="IN">Ấn Độ                            </option>
+                                                    <option value="IO">Thuộc địa Anh tại Ấn Độ Dương                            </option>
+                                                    <option value="IQ">I-rắc                            </option>
+                                                    <option value="IR">I-ran                            </option>
+                                                    <option value="IS">Ai-xơ-len                            </option>
+                                                    <option value="IT">Ý                            </option>
+                                                    <option value="JE">Jersey                            </option>
+                                                    <option value="JM">Jamaica                            </option>
+                                                    <option value="JO">Jordan                            </option>
+                                                    <option value="JP">Nhật Bản                            </option>
+                                                    <option value="KE">Kenya                            </option>
+                                                    <option value="KG">Kyrgyzstan                            </option>
+                                                    <option value="KH">Campuchia                            </option>
+                                                    <option value="KI">Kiribati                            </option>
+                                                    <option value="KM">Comoros                            </option>
+                                                    <option value="KN">Saint Kitts và Nevis                            </option>
+                                                    <option value="KP">Bắc Triều Tiên                            </option>
+                                                    <option value="KR">Hàn Quốc                            </option>
+                                                    <option value="KW">Cô-oét                            </option>
+                                                    <option value="KY">Quần Đảo Cayman                            </option>
+                                                    <option value="KZ">Kazakhstan                            </option>
+                                                    <option value="LA">Lào                            </option>
+                                                    <option value="LB">Li-băng                            </option>
+                                                    <option value="LC">Saint Lucia                            </option>
+                                                    <option value="LI">Liechtenstein                            </option>
+                                                    <option value="LK">Sri Lanka                            </option>
+                                                    <option value="LR">LIberia                            </option>
+                                                    <option value="LS">Lesotho                            </option>
+                                                    <option value="LT">Lithuania                            </option>
+                                                    <option value="LU">Luxembourg                            </option>
+                                                    <option value="LV">Latvia                            </option>
+                                                    <option value="LY">Li-bi                            </option>
+                                                    <option value="MA">Ma-rốc                            </option>
+                                                    <option value="MC">Monaco                            </option>
+                                                    <option value="MD">Moldova                            </option>
+                                                    <option value="ME">Montenegro                            </option>
+                                                    <option value="MF">Saint Martin                            </option>
+                                                    <option value="MG">Madagascar                            </option>
+                                                    <option value="MH">Quần đảo Marshall                            </option>
+                                                    <option value="MK">Macedonia                            </option>
+                                                    <option value="ML">Mali                            </option>
+                                                    <option value="MM">Myanmar [Miến Điện]                            </option>
+                                                    <option value="MN">Mông Cổ                            </option>
+                                                    <option value="MO">Đặc khu hành chính Macao thuộc CHND Trung Hoa                            </option>
+                                                    <option value="MP">Quần Đảo Bắc Mariana                            </option>
+                                                    <option value="MQ">Martinique                            </option>
+                                                    <option value="MR">Mauritania                            </option>
+                                                    <option value="MS">Montserrat                            </option>
+                                                    <option value="MT">Malta                            </option>
+                                                    <option value="MU">Mauritius                            </option>
+                                                    <option value="MV">Maldives                            </option>
+                                                    <option value="MW">Malawi                            </option>
+                                                    <option value="MX">Mê-hi-cô                            </option>
+                                                    <option value="MY">Malaysia                            </option>
+                                                    <option value="MZ">Mozambique                            </option>
+                                                    <option value="NA">Namibia                            </option>
+                                                    <option value="NC">New Caledonia                            </option>
+                                                    <option value="NE">Niger                            </option>
+                                                    <option value="NF">Đảo Norfolk                            </option>
+                                                    <option value="NG">Nigeria                            </option>
+                                                    <option value="NI">Nicaragua                            </option>
+                                                    <option value="NL">Hà Lan                            </option>
+                                                    <option value="NO">Na Uy                            </option>
+                                                    <option value="NP">Nepal                            </option>
+                                                    <option value="NR">Nauru                            </option>
+                                                    <option value="NU">Niue                            </option>
+                                                    <option value="NZ">New Zealand                            </option>
+                                                    <option value="OM">Oman                            </option>
+                                                    <option value="PA">Pa-na-ma                            </option>
+                                                    <option value="PE">Peru                            </option>
+                                                    <option value="PF">Polynesia thuộc Pháp                            </option>
+                                                    <option value="PG">Papua New Guinea                            </option>
+                                                    <option value="PH">Philippin                            </option>
+                                                    <option value="PK">Pakistan                            </option>
+                                                    <option value="PL">Ba Lan                            </option>
+                                                    <option value="PM">Saint Pierre và Miquelon                            </option>
+                                                    <option value="PN">Quần đảo Pitcairn                            </option>
+                                                    <option value="PR">Puerto Rico                            </option>
+                                                    <option value="PS">Lãnh thổ Palestine                            </option>
+                                                    <option value="PT">Bồ Đào Nha                            </option>
+                                                    <option value="PW">Palau                            </option>
+                                                    <option value="PY">Paraguay                            </option>
+                                                    <option value="QA">Qatar                            </option>
+                                                    <option value="RE">Réunion                            </option>
+                                                    <option value="RO">Romania                            </option>
+                                                    <option value="RS">Serbia                            </option>
+                                                    <option value="RU">Nga                            </option>
+                                                    <option value="RW">Rwanda                            </option>
+                                                    <option value="SA">A-rập Xê-út                            </option>
+                                                    <option value="SB">Quần đảo Solomon                            </option>
+                                                    <option value="SC">Seychelles                            </option>
+                                                    <option value="SD">Xu-đăng                            </option>
+                                                    <option value="SE">Thụy Điển                            </option>
+                                                    <option value="SG">Singapore                            </option>
+                                                    <option value="SH">Saint Helena                            </option>
+                                                    <option value="SI">Slovenia                            </option>
+                                                    <option value="SJ">Svalbard và Jan Mayen                            </option>
+                                                    <option value="SK">Slovakia                            </option>
+                                                    <option value="SL">Sierra Leone                            </option>
+                                                    <option value="SM">San Marino                            </option>
+                                                    <option value="SN">Senegal                            </option>
+                                                    <option value="SO">Somali                            </option>
+                                                    <option value="SR">Suriname                            </option>
+                                                    <option value="ST">São Tomé và Príncipe                            </option>
+                                                    <option value="SV">El Salvador                            </option>
+                                                    <option value="SY">Syria                            </option>
+                                                    <option value="SZ">Swaziland                            </option>
+                                                    <option value="TC">Quần Đảo Turk và Caicos                            </option>
+                                                    <option value="TD">Chad                            </option>
+                                                    <option value="TF">Thuộc Địa Nam của Pháp                            </option>
+                                                    <option value="TG">Togo                            </option>
+                                                    <option value="TH">Thái Lan                            </option>
+                                                    <option value="TJ">Tajikistan                            </option>
+                                                    <option value="TK">Tokelau                            </option>
+                                                    <option value="TL">Đông Ti-mo                            </option>
+                                                    <option value="TM">Turkmenistan                            </option>
+                                                    <option value="TN">Tuy-ni-di                            </option>
+                                                    <option value="TO">Tonga                            </option>
+                                                    <option value="TR">Thổ Nhĩ Kỳ                            </option>
+                                                    <option value="TT">Trinidad và Tobago                            </option>
+                                                    <option value="TV">Tuvalu                            </option>
+                                                    <option value="TW">Đài Loan                            </option>
+                                                    <option value="TZ">Tanzania                            </option>
+                                                    <option value="UA">Ukraina                            </option>
+                                                    <option value="UG">Uganda                            </option>
+                                                    <option value="UM">Các đảo nhỏ xa trung tâm thuộc Mỹ                            </option>
+                                                    <option value="UY">Uruguay                            </option>
+                                                    <option value="UZ">Uzbekistan                            </option>
+                                                    <option value="VA">Va-ti-căng                            </option>
+                                                    <option value="VC">Saint Vincent và Grenadines                            </option>
+                                                    <option value="VE">Venezuela                            </option>
+                                                    <option value="VG">Quần đảo Virgin thuộc Anh                            </option>
+                                                    <option value="VI">Quần đảo Virgin thuộc Mỹ                            </option>
+                                                    <option value="VU">Vanuatu                            </option>
+                                                    <option value="WF">Wallis và Futuna                            </option>
+                                                    <option value="WS">Samoa                            </option>
+                                                    <option value="YE">Yemen                            </option>
+                                                    <option value="YT">Mayotte                            </option>
+                                                    <option value="ZA">Nam Phi                            </option>
+                                                    <option value="ZM">Zambia                            </option>
+                                                    <option value="ZW">Zimbabwe                            </option>
+                                        </select>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="region_id" class="col-lg-4 control-label visible-lg-block">City</label>
+            <div class="col-lg-8 input-wrap has-feedback">
+                    <select name="region_id" class="form-control address" id="region_id" data-bv-field="region_id">
+                        <option value="">Your city</option>
+                                                                            <option value="294">Hồ Chí Minh</option>
+                                                    <option value="297">Hà Nội</option>
+                                                    <option value="291">Đà Nẵng</option>
+                                                    <option value="278">An Giang</option>
+                                                    <option value="280">Bà Rịa - Vũng Tàu</option>
+                                                    <option value="282">Bắc Giang</option>
+                                                    <option value="281">Bắc Kạn</option>
+                                                    <option value="279">Bạc Liêu</option>
+                                                    <option value="283">Bắc Ninh</option>
+                                                    <option value="284">Bến Tre</option>
+                                                    <option value="285">Bình Dương</option>
+                                                    <option value="286">Bình Phước</option>
+                                                    <option value="287">Bình Thuận</option>
+                                                    <option value="316">Bình Định</option>
+                                                    <option value="289">Cà Mau</option>
+                                                    <option value="290">Cần Thơ</option>
+                                                    <option value="288">Cao Bằng</option>
+                                                    <option value="293">Gia Lai</option>
+                                                    <option value="295">Hà Giang</option>
+                                                    <option value="296">Hà Nam</option>
+                                                    <option value="299">Hà Tĩnh</option>
+                                                    <option value="300">Hải Dương</option>
+                                                    <option value="301">Hải Phòng</option>
+                                                    <option value="319">Hậu Giang</option>
+                                                    <option value="302">Hoà Bình</option>
+                                                    <option value="320">Hưng Yên</option>
+                                                    <option value="321">Khánh Hòa</option>
+                                                    <option value="322">Kiên Giang</option>
+                                                    <option value="323">Kon Tum</option>
+                                                    <option value="304">Lai Châu</option>
+                                                    <option value="306">Lâm Đồng</option>
+                                                    <option value="305">Lạng Sơn</option>
+                                                    <option value="324">Lào Cai</option>
+                                                    <option value="325">Long An</option>
+                                                    <option value="326">Nam Định</option>
+                                                    <option value="327">Nghệ An</option>
+                                                    <option value="307">Ninh Bình</option>
+                                                    <option value="328">Ninh Thuận</option>
+                                                    <option value="329">Phú Thọ</option>
+                                                    <option value="308">Phú Yên</option>
+                                                    <option value="309">Quảng Bình</option>
+                                                    <option value="310">Quảng Nam</option>
+                                                    <option value="311">Quảng Ngãi</option>
+                                                    <option value="330">Quảng Ninh</option>
+                                                    <option value="312">Quảng Trị</option>
+                                                    <option value="313">Sóc Trăng</option>
+                                                    <option value="331">Sơn La</option>
+                                                    <option value="332">Tây Ninh</option>
+                                                    <option value="333">Thái Bình</option>
+                                                    <option value="334">Thái Nguyên</option>
+                                                    <option value="335">Thanh Hóa</option>
+                                                    <option value="303">Thừa Thiên Huế</option>
+                                                    <option value="336">Tiền Giang</option>
+                                                    <option value="314">Trà Vinh</option>
+                                                    <option value="315">Tuyên Quang</option>
+                                                    <option value="337">Vĩnh Long</option>
+                                                    <option value="338">Vĩnh Phúc</option>
+                                                    <option value="339">Yên Bái</option>
+                                                    <option value="292">Đắk Lắk</option>
+                                                    <option value="340">Đắk Nông</option>
+                                                    <option value="341">Điện Biên</option>
+                                                    <option value="317">Đồng Nai</option>
+                                                    <option value="318">Đồng Tháp</option>
+                                                                    </select><i class="form-control-feedback bv-no-label" data-bv-icon-for="region_id" style="display: none;"></i>
+            <small class="help-block" data-bv-validator="notEmpty" data-bv-for="region_id" data-bv-result="NOT_VALIDATED" style="display: none;">Vui lòng chọn Tỉnh/Thành phố</small></div>
+        </div>
+
+        
+
+        <div class="form-group row">
+            <label for="street" class="col-lg-4 control-label visible-lg-block">Address</label>
+            <div class="col-lg-8 input-wrap has-feedback">
+                <textarea name="street" class="form-control address" id="street" placeholder="" data-bv-field="street"></textarea><i class="form-control-feedback bv-no-label" data-bv-icon-for="street" style="display: none;"></i>
+                <span class="help-block"></span>
+            <small class="help-block" data-bv-validator="notEmpty" data-bv-for="street" data-bv-result="NOT_VALIDATED" style="display: none;">Vui lòng nhập Địa chỉ</small><small class="help-block" data-bv-validator="regexp" data-bv-for="street" data-bv-result="NOT_VALIDATED" style="display: none;">Địa chỉ của bạn không hợp lệ </small></div>
+        </div>
+
+        <div class="form-group row form-group-radio group-radio-k-address">
+            <label class="col-lg-4 control-label visible-lg-block"></label>
+            <div class="col-lg-8 input-wrap">
+                
+            </div>
+        </div>
+
+
+		<div class="form-group row">
+            <div class="col-lg-offset-4 col-lg-8">
+                <input type="hidden" name="address_id" value="">
+                                
+                                
+								<a href="product_summary"><button type="button" class="btn btn-default btn-custom2 visible-lg-inline-block js-hide">Cancel</button></a>
+								<a href="payment"><button id="btn-address" type="button" class="btn btn-primary btn-custom3" value="create">Next</button></a>
+            </div>
+        </div>
+        
+        
+        
+    </form>
+</div>
+</div>
+
+    <div class="shiping_plan"></div>
+
+
+    <div class="col-lg-4 hidden">
+        
+<div id="panel-cart">
+    <div class="panel panel-default cart">
+        <div class="panel-body">
+            <div class="order">
+                <span class="title">Đơn Hàng</span>
+                <span class="title"> (1 sản phẩm)</span>
+
+                                        <a href="/checkout/cart/" class="btn btn-default btn-custom1">Sửa</a>
+                            </div>
+            <div class="product">
+                                                    <div class="item">
+                        <p class="title">
+                            <strong>1 x</strong><a href="https://tiki.vn/phim-tham-dau-jomi-mayan-70-to-xanh-p422342?spid=8294330" target="_blank">Phim Thấm Dầu Jomi Mayan (70 Tờ) - Xanh </a>
+                                                            <span class="seller-by">
+                                    Cung cấp bởi <strong class="firm">Saigon Life</strong>
+                                </span>
+                                                    </p>
+
+
+
+                                                    <p class="price text-right">
+                                <span>46.000&nbsp;₫ </span>
+                            </p>
+                                            </div>
+                                                                </div>
+
+                                <p class="list-info-price">
+                        <b>Tạm tính</b>
+                                                <span>46.000&nbsp;₫</span>
+                    </p>
+                    
+            <p class="total2">
+                Thành tiền:
+                <span>46.000&nbsp;₫ </span>
+            </p>
+            <p class="text-right">
+                <i>(Đã bao gồm VAT)</i>
+            </p>
+        </div>
+    </div>
+
+    </div>
+    </div>
+</div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+<!-- MainBody End ============================= -->
+<!-- Footer ================================================================== -->
+	<%include footer%>
+<!-- Placed at the end of the document so the pages load faster ============================================= -->
+	<script src="customer/themes/js/jquery.js" type="text/javascript"></script>
+	<script src="customer/themes/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="customer/themes/js/google-code-prettify/prettify.js"></script>
+	
+	<script src="customer/themes/js/bootshop.js"></script>
+    <script src="customer/themes/js/jquery.lightbox-0.5.js"></script>
+	
+</body>
+</html>
