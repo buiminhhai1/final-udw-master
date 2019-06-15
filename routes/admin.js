@@ -22,7 +22,7 @@ router.get('/staffs/:id',staffController.staffdetail);
 
 
 router.get('/suppliers',supplierController.supplierlist);
-router.get('/suppliers/:id',supplierController.supplierdetail);
+router.get('/suppliers/supplierdetail',supplierController.supplierdetail);
 
 
 router.get('/products',productController.products);
@@ -31,7 +31,7 @@ router.get('/products/:id',productController.productdetail);
 router.get('/category',categoryController.category);
 
 router.get('/orders',orderController.orders);
-router.get('/orders/:id',orderController.orderdetail);
+router.get('/orders/orderdetail',orderController.orderdetail);
 
 router.get('/salesfigures',salesfigureController.salesfigures);
 
