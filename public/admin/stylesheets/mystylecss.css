@@ -9,6 +9,7 @@
 }
 .my-form{
 	margin-left: 30px;
+	position: absolute;
 }
 .my-button{
 	height: 40px !important;
@@ -29,7 +30,36 @@
 	background-color: white !important;
 	vertical-align: middle!important;
 }
-
-.my-table{
+#title-div-userlist{
+	display: inline;
 	
 }
+.my-form-table{
+	margin: 5px !important;
+	
+}
+.table {
+  width: 100% !important;
+  margin-bottom: 1rem  !important;
+  background-color: transparent  !important;
+}
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+
+.my-table-body{
+	text-align: center !important;
+	align-items: center!important;
+}
+#my-table{
+	font-size:15px !important;
+	text-align: center !important;
+	align-items: center!important;
+}
+.my-table-btn{
+	height: 35px !important;
+	text-align: center;
+	align-items: center;
+}
+ 
