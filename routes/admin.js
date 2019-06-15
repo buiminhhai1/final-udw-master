@@ -18,6 +18,7 @@ router.get('/users/:id',userController.userdetail);
 
 router.get('/products',productController.products);
 router.get('/products/:id',productController.productdetail);
+router.get('/productdetail',productController.productdetail);
 
 router.get('/orders',orderController.orders);
 router.get('/orders/:id',orderController.orderdetail);
