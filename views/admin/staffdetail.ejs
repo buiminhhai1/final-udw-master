@@ -18,9 +18,9 @@
 
                             <div class="row no-gutters align-items-center">
                                 <div >
-                                    <img class ="my-image-style" src="/admin/images/img.png">
+                                    <img class ="my-image-style" base src="<%=user.Hinh%>">
                                 </div>
-                                <h3 class="my-name-user">Bùi Minh Hải</h3>
+                                <h3 class="my-name-user"><%=user.Ten%></h3>
                             </div>
                          <button type="button" class="btn btn-primary my-button">
 						 Cập nhật thông tin 	
@@ -33,34 +33,27 @@
 						  <div class="row">
 							<div class="col-sm-10">
 							  <form class="my-form">
-								
-								<div id="gender-user">
-									<h5><i class="fa icon-gender-transgender"></i>Giới tính: Nam</h5>
-								</div>
-								
-								<div id="date-birth-user">
-									<h5 ><i class="fa fa-calendar"></i> Ngày sinh: 02-07-1997</h5>
-								</div>
-								
-								<div id="phone-user">
-									<h5><i class="fa fa-phone"></i>Điện thoại: 0372343545</h5>
-								</div>
+											
 								<div id="email-user">
 									<h5><i class="fa fa-info"></i>Email: ngovietduc200@gmail.com</h5>
 								</div>
-												
-								<div id="address-user">
-									<h5><i class="fa fa-location-arrow"></i>Địa chỉ: phường 1, quận 4, thành phố Hồ Chí Minh</h5>
+										
+								<div id="date-birth-user">
+									<h5 ><i class="fa fa-calendar"></i> Ngày sinh: <%=user.NgaySinh%></h5>
 								</div>
 										
+								<div id="address-user">
+									<h5><i class="fa fa-location-arrow"></i>Địa chỉ: <%=user.DiaChi%></h5>
+								</div>
+										
+								<div id="phone-user">
+									<h5><i class="fa fa-phone"></i>Điện thoại: <%=user.SDT%></h5>
+								</div>	
 								<div id="role-user">
 									<h5><i class="fa icon-account-card-details"></i>Chức vụ: Quản lý</h5>
 								
 								</div>
-								<div id="info-user">
-									<h5><i class="fa  icon-details"></i>Thông tin thêm: Đẹp trai vl :))</h5>
 								
-								</div>
 							</form>
 						
 							</div>
