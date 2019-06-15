@@ -14,3 +14,9 @@ exports.userdetail = function(req, res, next) {
 	});
 };
 
+exports.login = function(req, res, next) {
+    
+	res.render('admin/login', { title: 'Express'});
+	
+};
+

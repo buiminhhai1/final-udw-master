@@ -10,6 +10,7 @@ var top10Controller = require('../controllers/admin/top10Controller');
 
 
 router.get('/', userController.userlist);  
+router.get('/login', userController.login);  
 
 
 router.get('/users',userController.userlist);
