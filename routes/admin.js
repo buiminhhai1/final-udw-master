@@ -21,6 +21,9 @@ router.get('/', userController.userlist);
 
 router.get('/users',userController.userlist);
 router.get('/users/:id',userController.userdetail);
+// router.post('/users',userController.postuserlist);
+
+
 
 
 router.get('/products',productController.products);

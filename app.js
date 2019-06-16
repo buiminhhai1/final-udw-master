@@ -19,7 +19,7 @@ const { ensureAuthenticated, forwardAuthenticated } = require('./config/auth');
 app.use(expressSession(
 	{secret: 'keyboard cat',
 	resave: true,
-    saveUninitialized: true,cookie: {maxAge: 1000 * 60 * 20}}));
+    saveUninitialized: true,cookie: {maxAge: 1000 * 60 * 20},HttpOnly:false}));
 
 
 

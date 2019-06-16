@@ -90,10 +90,26 @@ router.post('/register', (req, res) => {
 router.post('/login', (req, res, next) => {
   passport.authenticate('local', {
     successRedirect: '/',
-    failureRedirect: '/login',
+    failureRedirect: '/auth/login',
     failureFlash: true
   })(req, res, next);
 });
+
+
+
+  router.get('/logout', (req, res) => {
+  req.logOut();
+
+  req.session.destroy(() => {
+    res
+    .clearCookie('connect.sid', {
+      path: '/admin',
+      httpOnly: true,
+    })
+    .sendStatus(200);
+  });
+  });
+
 
 
 module.exports = router;
