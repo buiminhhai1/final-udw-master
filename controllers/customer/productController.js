@@ -7,6 +7,6 @@ exports.products = function(req, res, next) {
 
 // top10
 exports.productdetail = function(req, res, next) {
-    res.render('customer/productdetail', { title: 'Express' });
+    res.render('customer/product_details', { title: 'Express' });
 };
 
