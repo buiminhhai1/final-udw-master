@@ -76,10 +76,15 @@
  }
 .my-temp-dialog{
 	z-index: 99999;
-	
+
 }
 
 .my-table-title{
 	padding: 20px;
 	
+}
+
+.form-row{
+	
+		margin-bottom: 10px !important;
 }

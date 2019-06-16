@@ -1,0 +1,93 @@
+		  
+	<div class="modal fade my-temp-dialog" id="my-staff-dialog" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3>Cập nhật thông tin nhân viên</h2>
+				</div>
+				<div class="modal-body ">
+					<div class="form-row">
+						<div class="col-md-5">
+						  <label for="edit-user-id">Id </label>
+						  <input type="text" class="form-control" id="edit-user-id" value="US001" readonly/>
+						</div>
+						<div class="col-md-7 col-mb-1">
+						  <label for="edit-user-displayname">Họ tên</label>
+						  <input type="text" class="form-control" id="edit-user-displayname" value="Bùi Minh Hải" required/>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="col-md-12">
+						  <label for="edit-user-email">Email</label>
+						  <input type="text" class="form-control" id="edit-user-email" value="buiminhhaideptrai@gmail.com" readonly/>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="col-md-7">
+						  <label for="edit-user-datebirth">Ngày sinh</label>
+						  <input type="date" class="form-control" id="edit-user-birthdate" value="" />
+						</div>
+						
+						<div class="col-md-5">
+						  <label for="edit-user-gender">Giới tính</label>
+							<select class="form-control" id="edit-user-gender">
+							  <option>Nam</option>
+							  <option>Nữ</option>
+							  <option>Khác</option>
+							</select>
+						</div>
+					</div>
+					
+					<div class="form-row">
+						<div class="col-md-12">
+							<label for="edit-user-avatar">Thay đổi avatar</label>
+							<div class="custom-file">
+								<input type="file" class="custom-file-input" id="edit-user-avatar"/>
+								<label class="custom-file-label" for="edit-user-avatar">Choose file</label>
+							</div>
+						</div>
+					</div>
+					
+					<div class="form-row">
+						<div class="col-md-12">
+							<label for="edit-user-address">Địa chỉ</label>
+							<input type="text" class="form-control" id="edit-user-address" value="Bùi Minh Hải"/>
+						</div>
+					</div>
+					
+					<div class="form-row">
+						<div class="col-md-7">
+							<label for="edit-user-datecontact">Ngày hợp tác</label>
+							<input type="text" class="form-control" id="edit-user-datecontact" value="01-01-2019" readonly/>
+						</div>
+					</div>
+					
+					<div class="form-row">
+						<div class="col-md-12">
+							<label for="edit-user-moreinfo">Thông tin khác</label>
+							 <textarea class="form-control" id="edit-user-moreinfo" value="he is so handsome and smart"></textarea>
+						</div>
+					</div>
+					
+					
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-default btn-primary" type="button" onclick="updateUserDetail()">Cập nhật</button>
+					<button class="btn btn-default btn-danger" type="button" onclick="deleteUser()">Xóa</button>
+					<button class='btn btn-default btn-dark' type ='button' data-dismiss="modal">Hủy bỏ</button>
+				</div>
+				<script>
+					function updateUserDetail(){
+						alert("Thông tin người dùng đã được cập nhật");
+					}
+					function deleteUser(){
+						alert("Người dùng đã bị xóa ra khỏi cở sở dữ liệu");
+					}
+					
+				</script>
+			</div>
+		
+		</div>
+
+	</div>
+				

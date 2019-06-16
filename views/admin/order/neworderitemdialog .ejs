@@ -1,0 +1,71 @@
+		  
+	<div class="modal fade my-temp-dialog" id="my-orderitem-dialog-new" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3>Thêm mới thông tin hóa đơn</h2>
+				</div>
+				<div class="modal-body ">
+					<div class="form-row">
+						<div class="col-md-5">
+						  <label for="new-orderitem-id">Id </label>
+						  <input type="text" class="form-control" id="new-orderitem-id" value="US001" readonly/>
+						</div>
+						<div class="col-md-7 col-mb-1">
+						  <label for="new-orderitem-idorder">Id hóa đơn</label>
+						  <select class="form-control" id="new-orderitem-idorder">
+							  <option>HD001</option>
+							  <option>HD002</option>
+							  <option>HD003</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="col-md-12">
+						  <label for="new-orderitem-address">Địa chỉ người nhận</label>
+						  <input type="text" class="form-control" id="new-orderitem-address" value="buiminhhaideptrai@gmail.com" />
+						</div>
+					</div>
+					
+					<div class="form-row">
+						<div class="col-md-5">
+						  <label for="new-orderitem-product">Sản phẩm </label>
+						  <select class="form-control" id="new-order-state">
+							  <option>Iphone 6</option>
+							  <option>Iphone 7</option>
+							  <option>Iphone 8</option>
+							</select>
+						</div>
+						<div class="col-md-7 col-mb-1">
+						  <label for="new-orderitem-quantity">Số lượng</label>
+						  <input type="text" class="form-control" id="new-orderitem-quantity" value="HD001" readonly/>
+						</div>
+					</div>
+				
+					<div class="form-row">
+						<div class="col-md-12">
+							<label for="new-order-price">Giá</label>
+							<input type="text" class="form-control" id="new-orderitem-price" value="1,000 $" readonly/>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-default btn-primary" type="button" onclick="updateUserDetail()">Thêm mới</button>
+					<button class="btn btn-default btn-danger" type="button" onclick="deleteUser()">Xóa</button>
+					<button class='btn btn-default btn-dark' type ='button' data-dismiss="modal">Hủy bỏ</button>
+				</div>
+				<script>
+					function updateUserDetail(){
+						alert("Thông tin chi tiết hóa đơn đã được thêm mới");
+					}
+					function deleteUser(){
+						alert("Chi tiết hóa đơn đã bị xóa ra khỏi cở sở dữ liệu");
+					}
+					
+				</script>
+			</div>
+		
+		</div>
+
+	</div>
+				

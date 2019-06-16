@@ -1,0 +1,85 @@
+		  
+	<div class="modal fade my-temp-dialog" id="my-supplier-dialog-new" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3>Thêm mới nhà cung cấp</h2>
+				</div>
+				<div class="modal-body ">
+					<div class="form-row">
+						<div class="col-md-5">
+						  <label for="new-supplier-id">Id </label>
+						  <input type="text" class="form-control" id="new-supplier-id" value="US001" readonly/>
+						</div>
+						<div class="col-md-7 col-mb-1">
+						  <label for="new-supplier-displayname">Tên nhà cung cấp</label>
+						  <input type="text" class="form-control" id="new-supplier-displayname" value="Bùi Minh Hải" required/>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="col-md-12">
+						  <label for="new-supplier-email">Email</label>
+						  <input type="text" class="form-control" id="new-supplier-email" value="buiminhhaideptrai@gmail.com" readonly/>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="col-md-7">
+						  <label for="new-supplier-datecontact">Ngày ngày hợp tác</label>
+						  <input type="date" class="form-control" id="new-supplier-datecontact" value="01-01-2019" readonly/>
+						</div>
+					
+					</div>
+					
+					<div class="form-row">
+						<div class="col-md-12">
+							<label for="new-supplier-avatar">Thay đổi avatar</label>
+							<div class="custom-file">
+								<input type="file" class="custom-file-input" id="new-supplier-avatar"/>
+								<label class="custom-file-label" for="new-supplier-avatar">Choose file</label>
+							</div>
+						</div>
+					</div>
+					
+					<div class="form-row">
+						<div class="col-md-12">
+							<label for="new-supplier-address">Địa chỉ</label>
+							<input type="text" class="form-control" id="new-supplier-address" value="Bùi Minh Hải"/>
+						</div>
+					</div>
+					
+					<div class="form-row">
+						<div class="col-md-7">
+							<label for="new-supplier-datecontact">Ngày hợp tác</label>
+							<input type="text" class="form-control" id="new-supplier-datecontact" value="01-01-2019" readonly/>
+						</div>
+					</div>
+					
+					<div class="form-row">
+						<div class="col-md-12">
+							<label for="new-supplier-moreinfo">Thông tin khác</label>
+							 <textarea class="form-control" id="new-supplier-moreinfo" value="he is so handsome and smart"></textarea>
+						</div>
+					</div>
+					
+					
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-default btn-primary" type="button" onclick="updateSupplierDetail()">Thêm mới</button>
+					<button class="btn btn-default btn-danger" type="button" onclick="deleteSupplier()">Xóa</button>
+					<button class='btn btn-default btn-dark' type ='button' data-dismiss="modal">Hủy bỏ</button>
+				</div>
+				<script>
+					function updateSupplierDetail(){
+						alert("Thông tin nhà cung cấp đã được cập nhật");
+					}
+					function deleteSupplier(){
+						alert("Nhà cung cấp đã bị xóa ra khỏi cở sở dữ liệu");
+					}
+					
+				</script>
+			</div>
+		
+		</div>
+
+	</div>
+				

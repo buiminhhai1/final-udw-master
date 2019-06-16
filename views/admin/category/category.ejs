@@ -2,13 +2,15 @@
 <html lang="en-us">
 
 <head>
-    <%include header %>
+ <%include ../header %>
 </head>
 
 <body class="layout layout-vertical layout-left-navigation layout-above-toolbar layout-above-footer">
         <main>
        <div id="wrapper">
-            <%include sidebar%>
+            <%include ../sidebar%>
+          <%include editcategorydialog%>
+		  <%include newcategorydialog%>
           <div class="content-wrapper">
                 <div class="content custom-scrollbar ps ps--active-y">
                     <div >
@@ -16,85 +18,73 @@
 						<!-- / body -->
 						<div class="container-fluid">
 							<div class="row">
+								
 								<div class="col-12">
-									<form class="my-form-table">
 									<!-- Title of table -->
-										<div class="row align-items-center flex-nowrap">
+									<div class="row align-items-center my-table-title">
 											<div class="col">
-												<div class="row align-items-center flex-nowrap">
-													<div>
-														<a href="#" ><h3 class="mycustom-title">Danh sách sản phẩm</h3></a>
-													</div>
+												<div>
+													<a href="#" ><h3 class="mycustom-title">Danh sách loại</h3></a>
 												</div>
+												
 											</div>
 
 											<div class="col-auto">
 												<div class="row align-items-center justify-content-end">		
 													<div class="user-menu-button">
 														<div>
-															<button class="btn btn-primary my-button">Thêm sản phẩm</button>
+															<button type="button" class="btn btn-primary my-button"data-toggle="modal" data-target="#my-category-dialog-new">Thêm mới</button>
+
 														</div>
 													</div>
 												</div>
 											</div>
-										</div>
+									</div>
+								
+									<form class="my-form-table">
 									<!-- Table -->
 										
 									<table id="my-table" class="table table-striped table-bordered">
 													<thead class="my-title-table">
 												<tr>
-													<th>Mã sản phẩm</th>
-													<th>Tên sản phẩm</th>
-													<th>Hình</th>
-													<th>Giá</th>
 													<th>Mã loại</th>
-													<th>Xem chi tiết</th>
+													<th>Tên loại</th>
+													<th>Nhà cung cấp</th>
 													<th>Chỉnh Sửa</th>
 												</tr>
 											</thead>
 												<tbody class="my-table-body">
 														<tr>
-															<th>Mã sản phẩm</th>
-															<th>Tên sản phẩm</th>
-															<th>Hình</th>
-															<th>Giá</th>
-															<th>Mã loại</th>
-													   <td><button class="my-table-btn btn btn-primary">Chi tiết</button></td>
-													  
-													   <td><button class="my-table-btn btn btn-primary">Chỉnh sửa</button></td>
+													
+													   <th>Mã loại</th>
+													<th>Tên loại</th>
+													<th>Nhà cung cấp</th>
+													 
+													   <td><button type="button" class="btn btn-primary my-button"data-toggle="modal" data-target="#my-category-dialog-edit">Cập nhật</button></td>
 													</tr>
 														<tr>
 													
-													   <th>Mã sản phẩm</th>
-													<th>Tên sản phẩm</th>
-													<th>Hình</th>
-													<th>Giá</th>
-													<th>Mã loại</th>
-													    <td><button class="my-table-btn btn btn-primary">Chi tiết</button></td>
-													  
-													   <td><button class="my-table-btn btn btn-primary">Chỉnh sửa</button></td>
+													   <th>Mã loại</th>
+													<th>Tên loại</th>
+													<th>Nhà cung cấp</th>
+													   
+													   <td><button type="button" class="btn btn-primary my-button"data-toggle="modal" data-target="#my-category-dialog-edit">Cập nhật</button></td>
 													</tr>
 														<tr>
 													
-													   <th>Mã sản phẩm</th>
-													<th>Tên sản phẩm</th>
-													<th>Hình</th>
-													<th>Giá</th>
-													<th>Mã loại</th>
-													      <td><button class="my-table-btn btn btn-primary">Chi tiết</button></td>
-													  
-													   <td><button class="my-table-btn btn btn-primary">Chỉnh sửa</button></td>
+													   <th>Mã loại</th>
+													<th>Tên loại</th>
+													<th>Nhà cung cấp</th>
+
+													   <td><button type="button" class="btn btn-primary my-button"data-toggle="modal" data-target="#my-category-dialog-edit">Cập nhật</button></td>
 													</tr>
 													<tr>
 													
-													   <th>Mã sản phẩm</th>
-													<th>Tên sản phẩm</th>
-													<th>Hình</th>
-													<th>Giá</th>
-													<th>Mã loại</th>
-													<td><button class="my-table-btn btn btn-primary">Chi tiết</button></td>
-													  
-													   <td><button class="my-table-btn btn btn-primary">Chỉnh sửa</button></td>
+													   <th>Mã loại</th>
+													<th>Tên loại</th>
+													<th>Nhà cung cấp</th>
+													 
+													   <td><button type="button" class="btn btn-primary my-button"data-toggle="modal" data-target="#my-category-dialog-edit">Cập nhật</button></td>
 													</tr>
 													
 													

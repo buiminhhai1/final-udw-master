@@ -1,0 +1,51 @@
+		  
+	<div class="modal fade my-temp-dialog" id="my-category-dialog-edit" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3>Cập nhật loại sản phẩm</h2>
+				</div>
+				<div class="modal-body ">
+					<div class="form-row">
+						<div class="col-md-5">
+						  <label for="edit-category-id">Id </label>
+						  <input type="text" class="form-control" id="edit-category-id" value="US001" readonly/>
+						</div>
+						<div class="col-md-7 col-mb-1">
+						  <label for="edit-category-displayname">Tên loại sản phẩm</label>
+						  <input type="text" class="form-control" id="edit-category-displayname" value="Bùi Minh Hải" required/>
+						</div>
+					</div>
+			
+					<div class="form-row">
+						<div class="col-md-12">
+						  <label for="edit-category-category">Nhà sản xuất</label>
+						  <select class="form-control" id="edit-category-category">
+							<option>Samsung</option>
+							<option>Huawei</option>
+							<option>Apple</option>
+							</select>
+						</div>
+					</div>
+					
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-default btn-primary" type="button" onclick="updateProductDetail()">Cập nhật</button>
+					<button class="btn btn-default btn-danger" type="button" onclick="deleteProduct()">Xóa</button>
+					<button class='btn btn-default btn-dark' type ='button' data-dismiss="modal">Hủy bỏ</button>
+				</div>
+				<script>
+					function updateProductDetail(){
+						alert("Thông tin loại sản phẩm đã được cập nhật");
+					}
+					function deleteProduct(){
+						alert("Loại sản phẩm đã bị xóa ra khỏi cở sở dữ liệu");
+					}
+					
+				</script>
+			</div>
+		
+		</div>
+
+	</div>
+				

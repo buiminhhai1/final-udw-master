@@ -1,0 +1,82 @@
+		  
+	<div class="modal fade my-temp-dialog" id="my-order-dialog-new" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3>Thêm mới thông tin hóa đơn</h2>
+				</div>
+				<div class="modal-body ">
+					<div class="form-row">
+						<div class="col-md-5">
+						  <label for="new-order-id">Id </label>
+						  <input type="text" class="form-control" id="new-order-id" value="US001" readonly/>
+						</div>
+						<div class="col-md-7 col-mb-1">
+						  <label for="new-order-displayname">Họ tên người nhận</label>
+						  <input type="text" class="form-control" id="new-order-displayname" value="Bùi Minh Hải" />
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="col-md-12">
+						  <label for="new-order-address">Địa chỉ người nhận</label>
+						  <input type="text" class="form-control" id="new-order-address" value="buiminhhaideptrai@gmail.com" />
+						</div>
+					</div>
+					
+					<div class="form-row">
+						<div class="col-md-7 ">
+						  <label for="new-order-customer">Người mua</label>
+						  <select class="form-control" id="new-order-customer">
+							  <option>Bùi Minh Hải</option>
+							  <option>Cao Thanh Hai</option>
+							  <option>Lý Trường Thanh Giang</option>
+							</select>
+						</div>
+					</div>
+					
+					<div class="form-row">
+						<div class="col-md-7">
+						  <label for="new-order-datebirth">Ngày đặt hàng</label>
+						  <input type="date" class="form-control" id="new-order-date" value="01-01-2019" readonly/>
+						</div>
+						
+						<div class="col-md-5">
+						  <label for="new-order-state">Tình trạng đơn hàng</label>
+							<select class="form-control" id="new-order-state">
+							  <option>Đang giao</option>
+							  <option>Đã giao</option>
+							  <option>Chưa giao</option>
+							</select>
+						</div>
+					</div>
+					
+					<div class="form-row">
+						<div class="col-md-12">
+							<label for="new-order-price">Tổng</label>
+							<input type="text" class="form-control" id="new-order-price" value="1,000 $"/>
+						</div>
+					</div>
+					
+				
+					
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-default btn-primary" type="button" onclick="updateUserDetail()">Thêm mới</button>
+					<button class="btn btn-default btn-danger" type="button" onclick="deleteUser()">Xóa</button>
+					<button class='btn btn-default btn-dark' type ='button' data-dismiss="modal">Hủy bỏ</button>
+				</div>
+				<script>
+					function updateUserDetail(){
+						alert("Thông tin hóa đơn đã được thêm mới");
+					}
+					function deleteUser(){
+						alert("Hóa đơn đã bị xóa ra khỏi cở sở dữ liệu");
+					}
+					
+				</script>
+			</div>
+		
+		</div>
+
+	</div>
+				

@@ -2,13 +2,14 @@
 <html lang="en-us">
 
 <head>
- <%include header %>
+ <%include ../header %>
 </head>
 
 <body class="layout layout-vertical layout-left-navigation layout-above-toolbar layout-above-footer">
     <main>
        <div id="wrapper">
-            <%include sidebar%>
+            <%include ../sidebar%>
+			<%include edituserdialog%>
           <div class="content-wrapper">
                 <div class="content custom-scrollbar ps ps--active-y">
                     <div >
@@ -16,28 +17,32 @@
 						<!-- / body -->
 						<div class="container-fluid">
 							<div class="row">
+								
 								<div class="col-12">
-									<form class="my-form-table">
 									<!-- Title of table -->
-										<div class="row align-items-center flex-nowrap">
+									<div class="row align-items-center my-table-title">
 											<div class="col">
-												<div class="row align-items-center flex-nowrap">
-													<div>
-														<a href="#" ><h3 class="mycustom-title">Danh sách tài khoản nhân viên</h3></a>
-													</div>
+												<div>
+													<a href="#" ><h3 class="mycustom-title">Danh sách tài khoản khách hàng</h3></a>
 												</div>
+												
 											</div>
 
 											<div class="col-auto">
 												<div class="row align-items-center justify-content-end">		
 													<div class="user-menu-button">
 														<div>
-															<button class="btn btn-primary my-button">Thêm mới</button>
+															<button type="button" class="btn btn-primary my-button"data-toggle="modal" data-target="#my-user-dialog">Thêm mới</button>
+
 														</div>
 													</div>
 												</div>
 											</div>
-										</div>
+									</div>
+								
+									<form class="my-form-table">
+									
+										
 									<!-- Table -->
 										
 									<table id="my-table" class="table table-striped table-bordered">
@@ -54,45 +59,7 @@
 												</tr>
 											</thead>
 												<tbody class="my-table-body">
-														<tr>
-													
-													   <td>1dfsafadsfadsfsda</td> 
-													   <Td>Bùi Minh Hảifasfasfasd</td>                  	                 
-													   <Td></td> 
-													   <td>Nam</td>
-													   <Td>02-07-1997</td>
-													   
-													   <td>Quận 4, Hồ Chí Minh</td>
-													   <td><button class="my-table-btn btn btn-primary">Chi tiết</button></td>
-													  
-													   <td><button class="my-table-btn btn btn-primary">Chỉnh sửa</button></td>
-													</tr>
-														<tr>
-													
-													   <td>1</td> 
-													   <Td>Bùi Minh Hải</td>                  	                 
-													   <Td></td> 
-													   <td>Nam</td>
-													   <Td>02-07-1997</td>
-													   
-													   <td>Quận 4, Hồ Chí Minh</td>
-													    <td><button class="my-table-btn btn btn-primary">Chi tiết</button></td>
-													  
-													   <td><button class="my-table-btn btn btn-primary">Chỉnh sửa</button></td>
-													</tr>
-														<tr>
-													
-													   <td>1</td> 
-													   <Td>Bùi Minh Hải</td>                  	                 
-													   <Td></td> 
-													   <td>Nam</td>
-													   <Td>02-07-1997</td>
-													   
-													   <td>Quận 4, Hồ Chí Minh</td>
-													      <td><button class="my-table-btn btn btn-primary">Chi tiết</button></td>
-													  
-													   <td><button class="my-table-btn btn btn-primary">Chỉnh sửa</button></td>
-													</tr>
+																											
 													<tr>
 													
 													   <td>1</td> 
@@ -102,12 +69,75 @@
 													   <Td>02-07-1997</td>
 													   
 													   <td>Quận 4, Hồ Chí Minh</td>
-													   <td><button class="my-table-btn btn btn-primary">Chi tiết</button></td>
+													    <td><button type="button" class="btn btn-primary my-button">Chi tiết</button></td>
 													  
-													   <td><button class="my-table-btn btn btn-primary">Chỉnh sửa</button></td>
+													   <td><button type="button" class="btn btn-primary my-button"data-toggle="modal" data-target="#my-user-dialog">Chỉnh sửa</button></td>
 													</tr>
+														<tr>
 													
+													   <td>1</td> 
+													   <Td>Bùi Minh Hải</td>                  	                 
+													   <Td></td> 
+													   <td>Nam</td>
+													   <Td>02-07-1997</td>
+													   
+													   <td>Quận 4, Hồ Chí Minh</td>
+													    <td><button type="button" class="btn btn-primary my-button">Chi tiết</button></td>
+													  
+													   <td><button type="button" class="btn btn-primary my-button"data-toggle="modal" data-target="#my-user-dialog">Chỉnh sửa</button></td>
+													</tr>
+															<tr>
 													
+													   <td>1</td> 
+													   <Td>Bùi Minh Hải</td>                  	                 
+													   <Td></td> 
+													   <td>Nam</td>
+													   <Td>02-07-1997</td>
+													   
+													   <td>Quận 4, Hồ Chí Minh</td>
+													    <td><button type="button" class="btn btn-primary my-button">Chi tiết</button></td>
+													  
+													   <td><button type="button" class="btn btn-primary my-button"data-toggle="modal" data-target="#my-user-dialog">Chỉnh sửa</button></td>
+													</tr>
+														<tr>
+													
+													   <td>1</td> 
+													   <Td>Bùi Minh Hải</td>                  	                 
+													   <Td></td> 
+													   <td>Nam</td>
+													   <Td>02-07-1997</td>
+													   
+													   <td>Quận 4, Hồ Chí Minh</td>
+													    <td><button type="button" class="btn btn-primary my-button">Chi tiết</button></td>
+													  
+													   <td><button type="button" class="btn btn-primary my-button"data-toggle="modal" data-target="#my-user-dialog">Chỉnh sửa</button></td>
+													</tr>
+														<tr>
+													
+													   <td>1</td> 
+													   <Td>Bùi Minh Hải</td>                  	                 
+													   <Td></td> 
+													   <td>Nam</td>
+													   <Td>02-07-1997</td>
+													   
+													   <td>Quận 4, Hồ Chí Minh</td>
+													    <td><button type="button" class="btn btn-primary my-button">Chi tiết</button></td>
+													  
+													   <td><button type="button" class="btn btn-primary my-button"data-toggle="modal" data-target="#my-user-dialog">Chỉnh sửa</button></td>
+													</tr>
+														<tr>
+													
+													   <td>1</td> 
+													   <Td>Bùi Minh Hải</td>                  	                 
+													   <Td></td> 
+													   <td>Nam</td>
+													   <Td>02-07-1997</td>
+													   
+													   <td>Quận 4, Hồ Chí Minh</td>
+													    <td><button type="button" class="btn btn-primary my-button">Chi tiết</button></td>
+													  
+													   <td><button type="button" class="btn btn-primary my-button"data-toggle="modal" data-target="#my-user-dialog">Chỉnh sửa</button></td>
+													</tr>
 												</tbody>
 
 											</table>
@@ -127,6 +157,7 @@
 				  </div>
 		</div>
     </main>
+</body>
 </body>
 
 </html>

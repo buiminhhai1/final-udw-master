@@ -1,0 +1,83 @@
+		  
+	<div class="modal fade my-temp-dialog" id="my-product-dialog-edit" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3>Cập nhật thông tin sản phẩm</h2>
+				</div>
+				<div class="modal-body ">
+					<div class="form-row">
+						<div class="col-md-5">
+						  <label for="edit-product-id">Id </label>
+						  <input type="text" class="form-control" id="edit-product-id" value="US001" readonly/>
+						</div>
+						<div class="col-md-7 col-mb-1">
+						  <label for="edit-product-displayname">Tên sản phẩm</label>
+						  <input type="text" class="form-control" id="edit-product-displayname" value="Bùi Minh Hải" required/>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="col-md-12">
+						  <label for="edit-product-info">Thông tin chi tiết</label>
+						  <textarea class="form-control" id="edit-product-info" value="he is so handsome and smart"></textarea>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="col-md-5">
+						  <label for="edit-product-category">Loại sản phẩm</label>
+						  <select class="form-control" id="edit-product-category">
+							<option>Điện thoại</option>
+							<option>Laptop</option>
+							<option>Máy ảnh</option>
+							</select>
+						  
+						</div>
+						
+						<div class="col-md-7">
+						  <label for="edit-product-price">Giá</label>
+							<input type="text" class="form-control" id="edit-product-price" value="" />
+						</div>
+					</div>
+					
+					<div class="form-row">
+						<div class="col-md-12">
+							<label for="edit-product-avatar">Thay đổi avatar</label>
+							<div class="custom-file">
+								<input type="file" class="custom-file-input" id="edit-product-avatar"/>
+								<label class="custom-file-label" for="edit-product-avatar">Choose file</label>
+							</div>
+						</div>
+					</div>
+					
+					
+					<div class="form-row">
+						<div class="col-md-12">
+							<label for="edit-product-avatar">Thay đổi ảnh mô tả</label>
+							<div class="custom-file">
+								<input type="file" class="custom-file-input" id="edit-product-imageinfo"/>
+								<label class="custom-file-label" for="edit-product-imageinfo">Choose file</label>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-default btn-primary" type="button" onclick="updateProductDetail()">Cập nhật</button>
+					<button class="btn btn-default btn-danger" type="button" onclick="deleteProduct()">Xóa</button>
+					<button class='btn btn-default btn-dark' type ='button' data-dismiss="modal">Hủy bỏ</button>
+				</div>
+				<script>
+					function updateProductDetail(){
+						alert("Thông tin sản phẩm đã được cập nhật");
+					}
+					function deleteProduct(){
+						alert("Sản phẩm đã bị xóa ra khỏi cở sở dữ liệu");
+					}
+					
+				</script>
+			</div>
+		
+		</div>
+
+	</div>
+				

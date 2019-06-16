@@ -5,11 +5,11 @@ var Mobile = require('../../models/admin/mobile');
 exports.products =function(req, res, next) {
 
 Mobile.find().exec(function(err,mobile){
-	res.render('admin/products', { title: 'Express',products : mobile});
+	res.render('admin/product/products', { title: 'Express',products : mobile});
 });
     
 };
 
 exports.productdetail = function(req, res, next) {
-    res.render('admin/productdetail', { title: 'Express' });
+    res.render('admin/product/productdetail', { title: 'Express' });
 };
