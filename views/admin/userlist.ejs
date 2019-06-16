@@ -9,6 +9,7 @@
     <main>
        <div id="wrapper">
             <%include sidebar%>
+			<%include ./userdialog/userdialog%>
           <div class="content-wrapper">
                 <div class="content custom-scrollbar ps ps--active-y">
                     <div >
@@ -16,28 +17,32 @@
 						<!-- / body -->
 						<div class="container-fluid">
 							<div class="row">
+								
 								<div class="col-12">
-									<form class="my-form-table">
 									<!-- Title of table -->
-										<div class="row align-items-center flex-nowrap">
+									<div class="row align-items-center my-table-title">
 											<div class="col">
-												<div class="row align-items-center flex-nowrap">
-													<div>
-														<a href="#" ><h3 class="mycustom-title">Danh sách tài khoản</h3></a>
-													</div>
+												<div>
+													<a href="#" ><h3 class="mycustom-title">Danh sách tài khoản nhân viên</h3></a>
 												</div>
+												
 											</div>
 
 											<div class="col-auto">
 												<div class="row align-items-center justify-content-end">		
 													<div class="user-menu-button">
 														<div>
-															<button class="btn btn-primary my-button">Thêm người dùng</button>
+															<button class="btn btn-primary my-button"data-toggle="modal" data-target="#my-user-dialog">Thêm mới</button>
+
 														</div>
 													</div>
 												</div>
 											</div>
-										</div>
+									</div>
+								
+									<form class="my-form-table">
+									
+										
 									<!-- Table -->
 										
 									<table id="my-table" class="table table-striped table-bordered">
@@ -124,13 +129,10 @@
 								</div>
 							</div>
 						</div>
-						<!-- enđ body --> 
-                    
-
-                <!-- <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; height: 471px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 325px;"></div></div></div> -->
-            </div>
+				  </div>
 		</div>
     </main>
+</body>
 </body>
 
 </html>

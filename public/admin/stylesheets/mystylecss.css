@@ -1,6 +1,15 @@
 .mycustom-title{
+	position: relative;
+	align-items: center!important;
+	vertical-align: center;
+	
+}
+.temp-title{
+	align-items: center!important;
+	font-size: 35px;
 	margin-left: 30px;
 }
+
 .my-image-style{
 	width: 50px;
 }
@@ -39,11 +48,7 @@
 	margin: 5px !important;
 	
 }
-.table {
-  width: 100% !important;
-  margin-bottom: 1rem  !important;
-  background-color: transparent  !important;
-}
+
 .table-striped tbody tr:nth-of-type(odd) {
   background-color: rgba(0, 0, 0, 0.05) !important;
 }
@@ -66,3 +71,15 @@
 .my-item-icon{
 	 color: #CC2EFA !important;
  }
+ #toolbar{
+	 font-size:20px !important;
+ }
+.my-temp-dialog{
+	z-index: 99999;
+	
+}
+
+.my-table-title{
+	padding: 20px;
+	
+}
