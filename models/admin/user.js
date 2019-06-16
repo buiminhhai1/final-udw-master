@@ -28,4 +28,4 @@ UserSchema
 //       });
 
 
-module.exports = mongoose.model('User', UserSchema,'KhachHang');
+module.exports = mongoose.model('', UserSchema,'KhachHang');

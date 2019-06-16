@@ -25,6 +25,7 @@
 </head>
 <body>
 
+
 <nav class="navbar navbar-expand-lg navbar-light navbar-laravel">
     <div class="container">
     <a class="navbar-brand" href="#">Đăng kí tài khoản</a>
@@ -38,39 +39,47 @@
     </div>
 </nav>
 
+
 <main class="my-form">
     <div class="cotainer">
         <div class="row justify-content-center">
             <div class="col-md-8">
                     <div class="card">
                         <div class="card-header">Thông tin người dùng</div>
+                        
+
                         <div class="card-body">
-                            <form name="my-form" onsubmit="return validform()" action="success.php" method="">
+							 
+                            <form name="my-form" onsubmit="return validform()" action="/auth/register" method="post">
+                                 <% if(errors &&  errors.length > 0){ %>
+                        <%include ./partials/messages%>
+                        <% } %>
                                 <div class="form-group row">
                                     <label for="full_name" class="col-md-4 col-form-label text-md-right">Họ và tên</label>
                                     <div class="col-md-6">
-                                        <input type="text" id="full_name" class="form-control" name="full-name">
+                                        <input type="text" id="full_name" class="form-control" name="name">
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
                                     <label for="email_address" class="col-md-4 col-form-label text-md-right">Địa chỉ E-Mail</label>
                                     <div class="col-md-6">
-                                        <input type="text" id="email_address" class="form-control" name="email-address">
+                                        <input type="text" id="email_address" class="form-control" name="email">
                                     </div>
                                 </div>
-
+								
+								
                                 <div class="form-group row">
-                                    <label for="user_name" class="col-md-4 col-form-label text-md-right">Tên đăng nhập</label>
+                                    <label for="user_name" class="col-md-4 col-form-label text-md-right">Mật khẩu</label>
                                     <div class="col-md-6">
-                                        <input type="text" id="user_name" class="form-control" name="username">
+                                        <input type="password" id="user_name" class="form-control" name="password1">
                                     </div>
                                 </div>
 
 								<div class="form-group row">
-                                    <label for="Password" class="col-md-4 col-form-label text-md-right">Mật Khẩu</label>
+                                    <label for="Password" class="col-md-4 col-form-label text-md-right">Nhập lại mật khẩu</label>
                                     <div class="col-md-6">
-                                        <input type="text" id="Password" class="form-control" name="Password">
+                                        <input type="password" id="Password" class="form-control" name="password2">
                                     </div>
                                 </div>
 
@@ -80,18 +89,17 @@
                                         <input type="text" id="phone_number" class="form-control">
                                     </div>
                                 </div>
-
-                                <div class="form-group row">
+								<div class="form-group row">
                                     <label for="present_address" class="col-md-4 col-form-label text-md-right">Địa chỉ hiện tại</label>
                                     <div class="col-md-6">
-                                        <input type="text" id="present_address" class="form-control">
+                                        <input type="text" id="present_address" class="form-control" name="address">
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
                                     <label for="permanent_address" class="col-md-4 col-form-label text-md-right">Quê quán</label>
                                     <div class="col-md-6">
-                                        <input type="text" id="permanent_address" class="form-control" name="permanent-address">
+                                        <input type="text" id="permanent_address" class="form-control" name="permanentaddress">
                                     </div>
                                 </div>
 
@@ -99,9 +107,11 @@
                                     <label for="nid_number" class="col-md-4 col-form-label text-md-right"><abbr
                                                 title="National Id Card">Số</abbr> CMND</label>
                                     <div class="col-md-6">
-                                        <input type="text" id="nid_number" class="form-control" name="nid-number">
+                                        <input type="text" id="nid_number" class="form-control" name="phonenumber">
                                     </div>
                                 </div>
+
+
 
                                     <div class="col-md-6 offset-md-6">
                                         <button type="submit" class="btn btn-primary">
