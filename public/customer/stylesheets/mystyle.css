@@ -144,3 +144,11 @@ body{
 .carousel-title{
 	color: #4000FF !important;
 }
+.product-title{
+	padding: 10px;
+	background-color: #333333;
+	color: white;
+	margin:10px;
+	border-radius: 5px;	
+	
+}
