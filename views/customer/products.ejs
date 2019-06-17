@@ -1,336 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <title>Bootshop online Shopping cart</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
-    <%include head%>
 
   </head>
 <body>
 <%include header%>
 <!-- Header End====================================================================== -->
-<div id="mainBody">
-	<div class="container">
-	<div class="row">
-<!-- Sidebar ================================================== -->
-<%include sidebar%>	
-
-<!-- Sidebar end=============================================== -->
-	<div class="span9">
-    <ul class="breadcrumb">
-		<li><a href="index">Home</a> <span class="divider">/</span></li>
-		<li class="active">Products Name</li>
-    </ul>
-	<h3> Thiết bị điện tử <small class="pull-right"> 40 săn phẩm có sẵn </small></h3>	
-	<hr class="soft"/>
-	<p>
-		Ngày nay, ngành công nghiệp đồ lót là một trong những lĩnh vực kinh doanh thành công nhất. Chúng tôi luôn giữ liên lạc với các xu hướng thời trang mới nhất - đó là lý do tại sao hàng hóa của chúng tôi rất phổ biến và chúng tôi có một lượng lớn khách hàng trung thành trên cả nước.
-	</p>
-	<hr class="soft"/>
-	<form class="form-horizontal span6">
-		<div class="control-group">
-		  <label class="control-label alignL">Sort By </label>
-			<select>
-              <option>Priduct name A - Z</option>
-              <option>Priduct name Z - A</option>
-              <option>Priduct Stoke</option>
-              <option>Price Lowest first</option>
-            </select>
+	
+	<div class="container-fluid">
+		<div class="row">
+			<!-- Sidebar ================================================== -->
+			<div class="col-2">
+				<%include sidebar %>
+			</div>
+			<!-- Sidebar end=============================================== -->
+			<div class="col-10" style="margin-top: 10px;"> 
+				<div class="row">
+					<div class="col-9">
+						<%include carousel%>
+					</div>
+					<div class="col-3">
+						<div class="row" >
+							<div  class="card" style="width: 18rem;">
+							  <img id="my-card-index" src="customer/images/samsungtv-carousel.jpg" class="card-img-top" alt="sản phẩm mới">
+							  <div class="card-body row" >
+								<div class="col-6">
+									<h5 class="card-title">Laptop Hp</h5>
+								</div>
+								<div class="col-6">
+									<button type="button" class="btn btn-primary">Chi tiết</button>
+								</div>
+							  </div>
+							</div>						
+						</div>
+						<div class="row" style="margin-top:10px";>
+							<div  class="card" style="width: 18rem;">
+							  <img id="my-card-index" src="customer/images/samsungtv-carousel.jpg" class="card-img-top" alt="sản phẩm mới">
+							  <div class="card-body row" >
+								<div class="col-6">
+									<h5 class="card-title">Laptop Hp</h5>
+								</div>
+								<div class="col-6">
+									<button type="button" class="btn btn-primary">Chi tiết</button>
+								</div>
+							  </div>
+							</div>						
+						</div>
+					</div>
+				</div>
+				<!-- đầy sidebar-->
+				<div class="row" style="margin-top:10px;">
+					<div class="col-3">
+						<div class="card" style="width: 17rem;">
+							<img src="customer/images/samsungtv-carousel.jpg" class="card-img-top" alt="...">
+							<div class="card-body">
+								<p class="card-text">Laptop Hp</p>
+								<h5 class="card-title">25,000,000 Đ</h5>
+								<button type="button" class="btn btn-primary">Chi tiết</button>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-3">
+						<div class="card" style="width: 17rem;">
+							<img src="customer/images/samsungtv-carousel.jpg" class="card-img-top" alt="...">
+							<div class="card-body">
+								<p class="card-text">Laptop Hp</p>
+								<h5 class="card-title">25,000,000 Đ</h5>
+								<button type="button" class="btn btn-primary">Chi tiết</button>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-3">
+						<div class="card" style="width: 17rem;">
+							<img src="customer/images/samsungtv-carousel.jpg" class="card-img-top" alt="...">
+							<div class="card-body">
+								<p class="card-text">Laptop Hp</p>
+								<h5 class="card-title">25,000,000 Đ</h5>
+								<button type="button" class="btn btn-primary">Chi tiết</button>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-3">
+						<div class="card" style="width: 17rem;">
+							<img src="customer/images/samsungtv-carousel.jpg" class="card-img-top" alt="...">
+							<div class="card-body">
+								<p class="card-text">Laptop Hp</p>
+								<h5 class="card-title">25,000,000 Đ</h5>
+								<button type="button" class="btn btn-primary">Chi tiết</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row" style="margin-top:15px;">
+					<div class="col-3">
+						<div class="card" style="width: 17rem;">
+							<img src="customer/images/samsungtv-carousel.jpg" class="card-img-top" alt="...">
+							<div class="card-body">
+								<p class="card-text">Laptop Hp</p>
+								<h5 class="card-title">25,000,000 Đ</h5>
+								<button type="button" class="btn btn-primary">Chi tiết</button>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-3">
+						<div class="card" style="width: 17rem;">
+							<img src="customer/images/samsungtv-carousel.jpg" class="card-img-top" alt="...">
+							<div class="card-body">
+								<p class="card-text">Laptop Hp</p>
+								<h5 class="card-title">25,000,000 Đ</h5>
+								<button type="button" class="btn btn-primary">Chi tiết</button>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-3">
+						<div class="card" style="width: 17rem;">
+							<img src="customer/images/samsungtv-carousel.jpg" class="card-img-top" alt="...">
+							<div class="card-body">
+								<p class="card-text">Laptop Hp</p>
+								<h5 class="card-title">25,000,000 Đ</h5>
+								<button type="button" class="btn btn-primary">Chi tiết</button>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-3">
+						<div class="card" style="width: 17rem;">
+							<img src="customer/images/samsungtv-carousel.jpg" class="card-img-top" alt="...">
+							<div class="card-body">
+								<p class="card-text">Laptop Hp</p>
+								<h5 class="card-title">25,000,000 Đ</h5>
+								<button type="button" class="btn btn-primary">Chi tiết</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-	  </form>
-	  
-<div id="myTab" class="pull-right">
- <a href="#listView" data-toggle="tab"><span class="btn btn-large"><i class="icon-list"></i></span></a>
- <a href="#blockView" data-toggle="tab"><span class="btn btn-large btn-primary"><i class="icon-th-large"></i></span></a>
-</div>
-<br class="clr"/>
-<div class="tab-content">
-	<div class="tab-pane" id="listView">
-		<div class="row">	  
-			<div class="span2">
-				<img src="customer/themes/images/products/3.jpg" alt=""/>
+		
+		<!-- dữ liệu đổ vào nhớ chú ý mấy cái class với style nhé, nó khác mấy cái ở trên nha.-->
+		<div class="row">
+			<div class="row-5 top10-title">
+				<h3>Top 10 sản phẩm bán chạy</h3>
 			</div>
-			<div class="span4">
-				<h3>New | Available</h3>				
-				<hr class="soft"/>
-				<h5>Product Name </h5>
-				<p>
-				Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies - 
-				that is why our goods are so popular..
-				</p>
-				<a class="btn btn-small pull-right" href="product_details">View Details</a>
-				<br class="clr"/>
+		</div>
+		<div class="row">
+			<div class="top10-index">
+				<div class="card" style="width: 16rem;">
+					<img src="customer/images/samsungtv-carousel.jpg" class="card-img-top" alt="...">
+					<div class="card-body">
+						<p class="card-text">Laptop Hp</p>
+						<h5 class="card-title">25,000,000 Đ</h5>
+						<button type="button" class="btn btn-primary">Chi tiết</button>
+					</div>
+				</div>
 			</div>
-			<div class="span3 alignR">
-			<form class="form-horizontal qtyFrm">
-			<h3> $140.00</h3>
-			<label class="checkbox">
-				<input type="checkbox">  Thêm vào so sánh
-			</label><br/>
-
-			  <a href="product_details" class="btn btn-large btn-primary">Thêm vào <i class=" icon-shopping-cart"></i></a>
-			  <a href="product_details" class="btn btn-large"><i class="icon-zoom-in"></i></a>
 			
-				</form>
+			<div class="top10-index">
+				<div class="card" style="width: 16rem;">
+					<img src="customer/images/samsungtv-carousel.jpg" class="card-img-top" alt="...">
+					<div class="card-body">
+						<p class="card-text">Laptop Hp</p>
+						<h5 class="card-title">25,000,000 Đ</h5>
+						<button type="button" class="btn btn-primary">Chi tiết</button>
+					</div>
+				</div>
 			</div>
+			<div class="top10-index">
+				<div class="card" style="width: 16rem;">
+					<img src="customer/images/samsungtv-carousel.jpg" class="card-img-top" alt="...">
+					<div class="card-body">
+						<p class="card-text">Laptop Hp</p>
+						<h5 class="card-title">25,000,000 Đ</h5>
+						<button type="button" class="btn btn-primary">Chi tiết</button>
+					</div>
+				</div>
+			</div>
+			<div class="top10-index">
+				<div class="card" style="width: 16rem;">
+					<img src="customer/images/samsungtv-carousel.jpg" class="card-img-top" alt="...">
+					<div class="card-body">
+						<p class="card-text">Laptop Hp</p>
+						<h5 class="card-title">25,000,000 Đ</h5>
+						<button type="button" class="btn btn-primary">Chi tiết</button>
+					</div>
+				</div>
+			</div>
+			<div class="top10-index">
+				<div class="card" style="width: 16rem;">
+					<img src="customer/images/samsungtv-carousel.jpg" class="card-img-top" alt="...">
+					<div class="card-body">
+						<p class="card-text">Laptop Hp</p>
+						<h5 class="card-title">25,000,000 Đ</h5>
+						<button type="button" class="btn btn-primary">Chi tiết</button>
+					</div>
+				</div>
+			</div>
+			
+			
+		
 		</div>
-		<hr class="soft"/>
-		<div class="row">	  
-			<div class="span2">
-				<img src="customer/themes/images/products/1.jpg" alt=""/>
+		<div class="row">
+			<div class="top10-index">
+				<div class="card" style="width: 16rem;">
+					<img src="customer/images/samsungtv-carousel.jpg" class="card-img-top" alt="...">
+					<div class="card-body">
+						<p class="card-text">Laptop Hp</p>
+						<h5 class="card-title">25,000,000 Đ</h5>
+						<button type="button" class="btn btn-primary">Chi tiết</button>
+					</div>
+				</div>
 			</div>
-			<div class="span4">
-				<h3>New | Available</h3>				
-				<hr class="soft"/>
-				<h5>Product Name </h5>
-				<p>
-				Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies - 
-				that is why our goods are so popular..
-				</p>
-				<a class="btn btn-small pull-right" href="product_details">View Details</a>
-				<br class="clr"/>
+			
+			<div class="top10-index">
+				<div class="card" style="width: 16rem;">
+					<img src="customer/images/samsungtv-carousel.jpg" class="card-img-top" alt="...">
+					<div class="card-body">
+						<p class="card-text">Laptop Hp</p>
+						<h5 class="card-title">25,000,000 Đ</h5>
+						<button type="button" class="btn btn-primary">Chi tiết</button>
+					</div>
+				</div>
 			</div>
-			<div class="span3 alignR">
-			<form class="form-horizontal qtyFrm">
-				<h3> $140.00</h3>
-				<label class="checkbox">
-				<input type="checkbox">  Adds product to compair
-				</label><br/>
-				
-				<a href="product_details" class="btn btn-large btn-primary"> Thêm vào  <i class=" icon-shopping-cart"></i></a>
-				<a href="product_details" class="btn btn-large"><i class="icon-zoom-in"></i></a>
-				
-			</form>
+			<div class="top10-index">
+				<div class="card" style="width: 16rem;">
+					<img src="customer/images/samsungtv-carousel.jpg" class="card-img-top" alt="...">
+					<div class="card-body">
+						<p class="card-text">Laptop Hp</p>
+						<h5 class="card-title">25,000,000 Đ</h5>
+						<button type="button" class="btn btn-primary">Chi tiết</button>
+					</div>
+				</div>
 			</div>
+			<div class="top10-index">
+				<div class="card" style="width: 16rem;">
+					<img src="customer/images/samsungtv-carousel.jpg" class="card-img-top" alt="...">
+					<div class="card-body">
+						<p class="card-text">Laptop Hp</p>
+						<h5 class="card-title">25,000,000 Đ</h5>
+						<button type="button" class="btn btn-primary">Chi tiết</button>
+					</div>
+				</div>
+			</div>
+			<div class="top10-index">
+				<div class="card" style="width: 16rem;">
+					<img src="customer/images/samsungtv-carousel.jpg" class="card-img-top" alt="...">
+					<div class="card-body">
+						<p class="card-text">Laptop Hp</p>
+						<h5 class="card-title">25,000,000 Đ</h5>
+						<button type="button" class="btn btn-primary">Chi tiết</button>
+					</div>
+				</div>
+			</div>
+			
+			
+		
 		</div>
-		<hr class="soft"/>
-		<div class="row">	  
-			<div class="span2">
-				<img src="customer/themes/images/products/3.jpg" alt=""/>
-			</div>
-			<div class="span4">
-				<h3>New | Available</h3>				
-				<hr class="soft"/>
-				<h5>Product Name </h5>
-				<p>
-				Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies - 
-				that is why our goods are so popular..
-				</p>
-				<a class="btn btn-small pull-right" href="product_details">View Details</a>
-				<br class="clr"/>
-			</div>
-			<div class="span3 alignR">
-			<form class="form-horizontal qtyFrm">
-				<h3> $140.00</h3>
-				<label class="checkbox">
-					<input type="checkbox">  Adds product to compair
-				</label><br/>
-				
-				  <a href="product_details" class="btn btn-large btn-primary"> Thêm vào <i class=" icon-shopping-cart"></i></a>
-				  <a href="product_details" class="btn btn-large"><i class="icon-zoom-in"></i></a>
-				
-			</form>
-			</div>
-		</div>
-		<hr class="soft"/>
-		<div class="row">	  
-			<div class="span2">
-				<img src="customer/themes/images/products/3.jpg" alt=""/>
-			</div>
-			<div class="span4">
-				<h3>New | Available</h3>				
-				<hr class="soft"/>
-				<h5>Product Name </h5>
-				<p>
-				Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies - 
-				that is why our goods are so popular..
-				</p>
-				<a class="btn btn-small pull-right" href="product_details">View Details</a>
-				<br class="clr"/>
-			</div>
-			<div class="span3 alignR">
-				<form class="form-horizontal qtyFrm">
-				<h3> $140.00</h3>
-				<label class="checkbox">
-				<input type="checkbox">  Adds product to compair
-				</label><br/>
-				
-				<a href="product_details" class="btn btn-large btn-primary">Thêm vào <i class=" icon-shopping-cart"></i></a>
-				<a href="product_details" class="btn btn-large"><i class="icon-zoom-in"></i></a>
-				
-				</form>
-			</div>
-		</div>
-	
-		<hr class="soft"/>
-		<div class="row">	  
-			<div class="span2">
-				<img src="customer/themes/images/products/3.jpg" alt=""/>
-			</div>
-			<div class="span4">
-				<h3>New | Available</h3>				
-				<hr class="soft"/>
-				<h5>Product Name </h5>
-				<p>
-				Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies - 
-				that is why our goods are so popular..
-				</p>
-				<a class="btn btn-small pull-right" href="product_details">View Details</a>
-				<br class="clr"/>
-			</div>
-			<div class="span3 alignR">
-				<form class="form-horizontal qtyFrm">
-				<h3> $140.00</h3>
-				<label class="checkbox">
-				<input type="checkbox"> Thêm vào so sánh
-				</label><br/>
-				<a href="product_details" class="btn btn-large btn-primary"> Thêm vào<i class=" icon-shopping-cart"></i></a>
-				<a href="product_details" class="btn btn-large"><i class="icon-zoom-in"></i></a>
-				</form>
-			</div>
-		</div>
-		<hr class="soft"/>
-		<div class="row">	  
-			<div class="span2">
-				<img src="customer/themes/images/products/3.jpg" alt=""/>
-			</div>
-			<div class="span4">
-				<h3>New | Available</h3>				
-				<hr class="soft"/>
-				<h5>Product Name </h5>
-				<p>
-				Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies - 
-				that is why our goods are so popular..
-				</p>
-				<a class="btn btn-small pull-right" href="product_details">View Details</a>
-				<br class="clr"/>
-			</div>
-			<div class="span3 alignR">
-				<form class="form-horizontal qtyFrm">
-				<h3> $140.00</h3>
-				<label class="checkbox">
-				<input type="checkbox">  Adds product to compair
-				</label><br/>
-				
-				<a href="product_details" class="btn btn-large btn-primary">Thêm vào<i class=" icon-shopping-cart"></i></a>
-				<a href="product_details" class="btn btn-large"><i class="icon-zoom-in"></i></a>
-				
-				</form>
-			</div>
-		</div>
-		<hr class="soft"/>
+		<%include footer %>
 	</div>
-
-	<div class="tab-pane  active" id="blockView">
-		<ul class="thumbnails">
-			<li class="span3">
-			  <div class="thumbnail">
-				<a href="product_details"><img src="customer/themes/images/products/3.jpg" alt=""/></a>
-				<div class="caption">
-				  <h5>Manicure &amp; Pedicure</h5>
-				  <p> 
-					I'm a paragraph. Click here 
-				  </p>
-				   <h4 style="text-align:center"><a class="btn" href="product_details"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Thêm vào<i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">&euro;222.00</a></h4>
-				</div>
-			  </div>
-			</li>
-			<li class="span3">
-			  <div class="thumbnail">
-				<a href="product_details"><img src="customer/themes/images/products/3.jpg" alt=""/></a>
-				<div class="caption">
-				  <h5>Manicure &amp; Pedicure</h5>
-				  <p> 
-					I'm a paragraph. Click here 
-				  </p>
-				   <h4 style="text-align:center"><a class="btn" href="product_details"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Thêm vào <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">&euro;222.00</a></h4>
-				</div>
-			  </div>
-			</li>
-			<li class="span3">
-			  <div class="thumbnail">
-				<a href="product_details"><img src="customer/themes/images/products/3.jpg" alt=""/></a>
-				<div class="caption">
-				  <h5>Manicure &amp; Pedicure</h5>
-				  <p> 
-					I'm a paragraph. Click here 
-				  </p>
-				    <h4 style="text-align:center"><a class="btn" href="product_details"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Thêm vào <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">&euro;222.00</a></h4>
-				</div>
-			  </div>
-			</li>
-			<li class="span3">
-			  <div class="thumbnail">
-				<a href="product_details"><img src="customer/themes/images/products/3.jpg" alt=""/></a>
-				<div class="caption">
-				  <h5>Manicure &amp; Pedicure</h5>
-				  <p> 
-					I'm a paragraph. Click here 
-				  </p>
-                <h4 style="text-align:center"><a class="btn" href="product_details"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Thêm vào<i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">&euro;222.00</a></h4>
-				</div>
-			  </div>
-			</li>
-			<li class="span3">
-			  <div class="thumbnail">
-				<a href="product_details"><img src="customer/themes/images/products/3.jpg" alt=""/></a>
-				<div class="caption">
-				  <h5>Manicure &amp; Pedicure</h5>
-				  <p> 
-					I'm a paragraph. Click here 
-				  </p>
-				    <h4 style="text-align:center"><a class="btn" href="product_details"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Thêm vào <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">&euro;222.00</a></h4>
-				</div>
-			  </div>
-			</li>
-			<li class="span3">
-			  <div class="thumbnail">
-				<a href="product_details"><img src="customer/themes/images/products/3.jpg" alt=""/></a>
-				<div class="caption">
-				  <h5>Manicure &amp; Pedicure</h5>
-				  <p> 
-					I'm a paragraph. Click here 
-				  </p>
-				    <h4 style="text-align:center"><a class="btn" href="product_details"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Thêm vào <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">&euro;222.00</a></h4>
-				</div>
-			  </div>
-			</li>
-		  </ul>
-	<hr class="soft"/>
-	</div>
-</div>
-
-	<a href="compair" class="btn btn-large pull-right">So sánh sản phẩm</a>
-	<div class="pagination">
-			<ul>
-			<li><a href="#">&lsaquo;</a></li>
-			<li><a href="#">1</a></li>
-			<li><a href="#">2</a></li>
-			<li><a href="#">3</a></li>
-			<li><a href="#">4</a></li>
-			<li><a href="#">...</a></li>
-			<li><a href="#">&rsaquo;</a></li>
-			</ul>
-			</div>
-			<br class="clr"/>
-</div>
-</div>
-</div>
-</div>
-<!-- MainBody End ============================= -->
-<!-- Footer ================================================================== -->
-	<%include footer%>
-<!-- Placed at the end of the document so the pages load faster ============================================= -->
-	<script src="customer/themes/js/jquery.js" type="text/javascript"></script>
-	<script src="customer/themes/js/bootstrap.min.js" type="text/javascript"></script>
-	<script src="customer/themes/js/google-code-prettify/prettify.js"></script>
 	
-	<script src="customer/themes/js/bootshop.js"></script>
-    <script src="customer/themes/js/jquery.lightbox-0.5.js"></script>
-	
+
 </body>
+
 </html>

@@ -1,49 +1,51 @@
-<div id="header">
-<div class="container">
-<div id="welcomeLine" class="row">
-	<div class="span6">Xin chào!<strong> nguyễn văn A</strong></div>
-	<div class="span6">
-	<div class="pull-right">
-		
-		
-	</div>
-	</div>
-</div>
+<%include head %>
+
+
 <!-- Navbar ================================================== -->
-<div id="logoArea" class="navbar">
-<a id="smallScreen" data-target="#topMenu" data-toggle="collapse" class="btn btn-navbar">
-	<span class="icon-bar"></span>
-	<span class="icon-bar"></span>
-	<span class="icon-bar"></span>
-</a>
-  <div class="navbar-inner">
-    <a class="brand" href="./"><img src="customer/themes/images/logo.png" alt="Bootsshop"></a>
-		<form class="form-inline navbar-search" method="post" action="products" >
-		<input id="srchFld"  class="srchTxt" type="text">
-		  <select class="srchTxt">
-			<option>Tất cả</option>
-			<option>Thiết bị điện tử </option>
-			<option>Quần áo </option>
-			<option>Ăn uống </option>
-			<option>Sức khoẻ &amp; Sắc đẹp </option>
-			<option>Thể thao &amp; Du lịch </option>
-			<option>Sách &amp; Giải trí </option>
-		</select> 
-		  <button type="submit" id="submitButton" class="btn btn-primary">Tìm kiếm</button>
-    </form>
-    <ul id="topMenu" class="nav pull-right">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="brand" href="./"><img src="customer/themes/images/logo.png" alt="Bootsshop"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+		<li class="nav-item">
+			<form class="form-inline my-2 my-lg-0">
+				<input class="form-control mr-sm-2" type="search" placeholder="Nhập ở đây" aria-label="Search">
+				<button class="btn btn-success my-2 my-sm-0" type="submit">Tìm kiếm</button>
+			</form>
+		</li>
 	
-	<li class=""><a href="productsummary"><i class="icon-shopping-cart icon-white"></i>Giỏ hàng</a> </li>
-	 	
-	 <li class=""><a href="orders">Đơn hàng</a></li>
-	 <li class=""><a href="updateinfo">Tài khoản</a></li>
-	 
-	 <li class="">
-	 <a href="/login" role="button" data-toggle="modal" style="padding-right:0"><span class="btn btn-large btn-success">Đăng nhập</span></a>
-	
-	</li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Trang chủ <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Điện thoại</a>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="#">Laptop</a>
+      </li>
+	  
+	  <li class="nav-item">
+        <a class="nav-link" href="#">Máy ảnh</a>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="#">Ti vi</a>
+      </li>
     </ul>
+    <form class="form-inline">
+			<button class="btn btn-success my-btn-nav" type="button"><i class="fa fa-list"></i> Đơn hàng</button>
+			<button class="btn btn-success my-btn-nav" type="button"><i class="fa fa-cart-plus"></i> Giỏ hàng</button>
+			<button class="btn btn-success my-btn-nav" type="submit"><i class="fa fa-user"> </i> Đăng nhập</button>
+	</form>
   </div>
-</div>
-</div>
-</div>
+</nav>
+
+
+
+
+
+
+
+

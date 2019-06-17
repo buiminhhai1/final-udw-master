@@ -1,35 +1,146 @@
-<div id="sidebar" class="span3">
-		<div class="well well-small"><a id="myCart" href="product_summary"><img src="customer/themes/images/ico-cart.png" alt="cart">3 món hàng trong giỏ
-		<span class="badge badge-warning pull-right">$222.00</span></a></div>
-		<ul id="sideManu" class="nav nav-tabs nav-stacked">
-			<li class="subMenu open"><a> Danh sách sản phẩm</a>
-				<ul>
-				<li><a class="active" href="products"><i class="icon-chevron-right"></i>Camera (100) </a></li>
-				<li><a href="products"><i class="icon-chevron-right"></i>Computer, Tablets &amp; laptop (30)</a></li>
-				<li><a href="products"><i class="icon-chevron-right"></i>Mobile Phone (80)</a></li>
-				<li><a href="products"><i class="icon-chevron-right"></i>Sound &amp; Vision (15)</a></li>
-				</ul>
-			</li>
+
+<!-- Bootstrap row -->
+<div class="row" id="body-row">
+    <!-- Sidebar -->
+    <div id="sidebar-container" class="sidebar-expanded d-none d-md-block"><!-- d-* hiddens the Sidebar in smaller devices. Its itens can be kept on the Navbar 'Menu' -->
+        <!-- Bootstrap List Group -->
+        <ul class="list-group">
+            <!-- Menu with phone -->
+            <a href="#submenu1" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                    <span class="fa fa-mobile-alt fa-fw mr-3"></span>
+                    <span class="menu-collapsed">Điện thoại</span>
+                    <span class="fa fa-caret-down ml-auto"></span>
+					
+                </div>
+            </a>
+            <!-- phone content -->
+            <div id='submenu1' class="collapse sidebar-submenu">
+                <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+					<span class="fab fa-apple fa-fw-mr-3"></i>
+                    <span class="menu-collapsed">  Iphone</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+					<span class="fab fa-android fa-fw-mr-3"></i>
+                    <span class="menu-collapsed">  Samsung</span>
+                </a>
+				<a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+					<span class="fab fa-android fa-fw-mr-3"></i>
+                    <span class="menu-collapsed">  Huawei</span>
+                </a>
+				<a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+					<span class="fab fa-android fa-fw-mr-3"></i>
+                    <span class="menu-collapsed">  Oppo</span>
+                </a>
+				<a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+					<span class="fab fa-android fa-fw-mr-3"></i>
+                    <span class="menu-collapsed">  Nokia</span>
+                </a>
+            </div>
+			
+			<!-- Menu with l -->
+            <a href="#submenu2" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                    <span class="fa fa-laptop-code fa-fw mr-3"></span>
+                    <span class="menu-collapsed">Laptop</span>
+                    <span class="fa fa-caret-down ml-auto"></span>
+                </div>
+            </a>
+            <!-- Submenu content -->
+            <div id='submenu2' class="collapse sidebar-submenu">
+                <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+					<span class="fab fa-apple fa-fw-mr-3"></i>
+                    <span class="menu-collapsed">  Macbook</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+					<span class="fab fa-windows fa-fw-mr-3"></i>
+                    <span class="menu-collapsed">  Hp</span>
+                </a>
+				<a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+					<span class="fab fa-windows fa-fw-mr-3"></i>
+                    <span class="menu-collapsed">  Dell</span>
+                </a>
+				
+				<a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+					<span class="fab fa-windows fa-fw-mr-3"></i>
+                    <span class="menu-collapsed">  Asus</span>
+                </a>
+				<a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+					<span class="fab fa-windows fa-fw-mr-3"></i>
+                    <span class="menu-collapsed">  Acer</span>
+                </a>
+            </div>            
+    
+			<a href="#submenu3" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                    <span class="fas fa-camera fa-fw mr-3"></span>
+                    <span class="menu-collapsed">Máy ảnh</span>
+                    <span class="fa fa-caret-down ml-auto"></span>
+                </div>
+            </a>
+            <!-- Submenu content -->
+            <div id='submenu3' class="collapse sidebar-submenu">
+                <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+					<span class="fas fa-camera fa-fw-mr-3"></i>
+                    <span class="menu-collapsed">  Canon </span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+					<span class="fas fa-camera-retro fa-fw-mr-3"></i>
+                    <span class="menu-collapsed">  Nikon </span>
+                </a>
+				<a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+					<span class="fas fa-camera-retro fa-fw-mr-3"></i>
+                    <span class="menu-collapsed">  Sony </span>
+                </a>
+				<a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+					<span class="fas fa-camera-retro fa-fw-mr-3"></i>
+                    <span class="menu-collapsed">  Fujifilm </span>
+                </a>
+				<a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+					<span class="fas fa-camera-retro fa-fw-mr-3"></i>
+                    <span class="menu-collapsed">  Olympus </span>
+                </a>
+			
+            </div>            
+    
+	
+	
+            <a href="#submenu4" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                    <span class="fas fa-tv fa-fw mr-3"></span>
+                    <span class="menu-collapsed">Ti vi</span>
+                    <span class="fa fa-caret-down ml-auto"></span>
+                </div>
+            </a>
+            <!-- Submenu content -->
+            <div id='submenu4' class="collapse sidebar-submenu">
+                <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+					<span class="fas fa-tv fa-fw-mr-3"></i>
+                    <span class="menu-collapsed">  Sony </span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+					<span class="fas fa-tv fa-fw-mr-3"></i>
+                    <span class="menu-collapsed">  Samsung </span>
+                </a>
+				<a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+					<span class="fas fa-tv fa-fw-mr-3"></i>
+                    <span class="menu-collapsed">  LG </span>
+                </a>
+				<a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+					<span class="fas fa-tv fa-fw-mr-3"></i>
+                    <span class="menu-collapsed">  Panasonic </span>
+                </a>
+				<a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+					<span class="fas fa-tv fa-fw-mr-3"></i>
+                    <span class="menu-collapsed">  Toshiba </span>
+                </a>
+				<a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+					<span class="fas fa-tv fa-fw-mr-3"></i>
+                    <span class="menu-collapsed">  TCL </span>
+                </a>
+            </div>
+			
 		</ul>
-		<br>
-		  <div class="thumbnail">
-			<img src="customer/themes/images/products/panasonic.jpg" alt="Bootshop panasonoc New camera">
-			<div class="caption">
-			  <h5>Panasonic</h5>
-				<h4 style="text-align:center"><a class="btn" href="product_details"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Add to <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">$222.00</a></h4>
-			</div>
-		  </div><br>
-			<div class="thumbnail">
-				<img src="customer/themes/images/products/kindle.png" title="Bootshop New Kindel" alt="Bootshop Kindel">
-				<div class="caption">
-				  <h5>Kindle</h5>
-				    <h4 style="text-align:center"><a class="btn" href="product_details"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Add to <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">$222.00</a></h4>
-				</div>
-			  </div><br>
-			<div class="thumbnail">
-				<img src="customer/themes/images/payment_methods.png" title="Bootshop Phương thức thanh toán" alt="Payments Methods">
-				<div class="caption">
-				  <h5>Phương thức thanh toán</h5>
-				</div>
-			  </div>
-	</div>
+    </div><!-- Main Col END -->
+    
+</div><!-- body-row END -->
