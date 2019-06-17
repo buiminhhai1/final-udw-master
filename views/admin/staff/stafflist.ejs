@@ -23,7 +23,7 @@
 									<div class="row align-items-center my-table-title">
 											<div class="col">
 												<div>
-													<a href="#" ><h3 class="mycustom-title">Danh sách tài khoản khách hàng</h3></a>
+													<a href="#" ><h3 class="mycustom-title">Danh sách tài khoản nhân viên</h3></a>
 												</div>
 												
 											</div>
@@ -44,69 +44,38 @@
 									<table id="my-table" class="table table-striped table-bordered">
 													<thead class="my-title-table">
 												<tr>
-													<th>Id</th>
+													<th>STT</th>
 													<th>Họ tên</th>
-													<th>Hình</th>
+													<!-- <th>Hình</th> -->
 													<th>Giới tính</th>
 													<th>Ngày sinh</th>
+													<th>Điện thoại</th>
 													<th>Địa chỉ</th>
 													<th>Xem chi tiết</th>
 													<th>Chỉnh Sửa</th>
 												</tr>
 											</thead>
 												<tbody class="my-table-body">
+														<% users.forEach(function(user,i){ %>
+
 														<tr>
-													
-													   <td>1dfsafadsfadsfsda</td> 
-													   <Td>Bùi Minh Hảifasfasfasd</td>                  	                 
-													   <Td></td> 
-													   <td>Nam</td>
-													   <Td>02-07-1997</td>
-													   
-													   <td>Quận 4, Hồ Chí Minh</td>
-													   <td><button type="button" class="my-table-btn btn btn-primary">Chi tiết</button></td>
+			
+													   <td><%=i%></td> 
+													   <Td><%=user.DisplayName%></td>                  	                 
+													   <!-- <Td></td>  -->
+													   <td><%=user.Gender%></td>
+													   <Td><%=user.DateOfBirth%></td>
+													   <td><%=user.Phone%></td>											  
+													   <td><%=user.Address%></td>
+													    
+													    <td><input type="button" onclick="location.href='/admin/staffs/<%=user._id%>'" value="Chi Tiết " class= "btn btn-primary my-button"/> </td></td>
+														
 													  
-													   <td><button type="button" class="btn btn-primary my-button"data-toggle="modal" data-target="#my-staff-dialog">Cập nhật</button></td>
+													   <td><button type="button" id="<%=user._id%>"class="btn btn-primary my-button"data-toggle="modal" data-target="#my-staff-dialog" onclick="pp(id)">Chỉnh sửa</button></td>
 													</tr>
-														<tr>
-													
-													   <td>1</td> 
-													   <Td>Bùi Minh Hải</td>                  	                 
-													   <Td></td> 
-													   <td>Nam</td>
-													   <Td>02-07-1997</td>
-													   
-													   <td>Quận 4, Hồ Chí Minh</td>
-													   <td><button type="button" class="my-table-btn btn btn-primary">Chi tiết</button></td>
-													  
-													   <td><button type="button" class="btn btn-primary my-button"data-toggle="modal" data-target="#my-staff-dialog">Cập nhật</button></td>
-													</tr>
-														<tr>
-													
-													   <td>1</td> 
-													   <Td>Bùi Minh Hải</td>                  	                 
-													   <Td></td> 
-													   <td>Nam</td>
-													   <Td>02-07-1997</td>
-													   
-													   <td>Quận 4, Hồ Chí Minh</td>
-													   <td><button type="button" class="my-table-btn btn btn-primary">Chi tiết</button></td>
-													  
-													   <td><button type="button" class="btn btn-primary my-button"data-toggle="modal" data-target="#my-staff-dialog">Cập nhật</button></td>
-													</tr>
-													<tr>
-													
-													   <td>1</td> 
-													   <Td>Bùi Minh Hải</td>                  	                 
-													   <Td></td> 
-													   <td>Nam</td>
-													   <Td>02-07-1997</td>
-													   
-													   <td>Quận 4, Hồ Chí Minh</td>
-													   <td><button class="my-table-btn btn btn-primary">Chi tiết</button></td>
-													  
-													   <td><button class="my-table-btn btn btn-primary">Chỉnh sửa</button></td>
-													</tr>
+
+													    
+													  	<% }); %>									
 													
 													
 												</tbody>
@@ -119,6 +88,40 @@
 														"iDisplayLength": 5
 													});
 												});
+
+												function pp(dd){
+															$.ajax({
+													        url: '/admin/staffs',
+													        method: 'post',
+													    	data: {
+										                    id : dd
+										              		},
+										                timeout: 5000,
+										                complete: function() {
+										                  //called when complete
+										                  console.log('process complete');
+										                },
+
+										                success: function(data) {
+										                  console.log(data._id);
+										                  console.log('process sucess');
+										                  $('#edit-user-id').attr('value',data._id);
+										                  $('#edit-user-displayname').attr('value',data.DisplayName);
+										                  $('#edit-user-email').attr('value',data.Email);
+										                  $('#edit-user-birthday').attr('value',data.DateOfBirth);
+										                  $('#edit-user-gender').attr('value',data.Gender);
+										                  $('#edit-user-avatar').attr('value',data.ImageAvatar);
+										                  $('#edit-user-address').attr('value',data.Address);
+										                  $('#edit-user-datecontact').attr('value',data.DateContact);
+										                  $('#edit-user-phone').attr('value',data.Phone);
+										                  
+										               },
+
+										                error: function() {
+										                  console.log('process error');
+										                },
+										              });}
+
 										</script>
 
 									</form>

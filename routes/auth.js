@@ -6,7 +6,9 @@ const { ensureAuthenticated, forwardAuthenticated } = require('../config/auth');
 const bcrypt = require('bcrypt');
 const passport = require('passport');
 // Load User model
-const User = require('../models/User');
+const Account = require('../models/account');
+const User = require('../models/user');
+
 
 // Login Page
 router.get('/login', forwardAuthenticated, (req, res) => res.render('admin/login'));
@@ -17,16 +19,18 @@ router.get('/register', forwardAuthenticated, (req, res) => res.render('admin/re
 
 // Register
 router.post('/register', (req, res) => {
-  const [ name, email, password, password2 ] = [req.body.name , req.body.email,req.body.password1,req.body.password2];
+  const a = [ name, email, password, password2,gender,birthday,phone,moreinfo,address ] = 
+  [req.body.name , req.body.email,req.body.password1,req.body.password2,
+  req.body.gender,req.body.birthday,req.body.phonenumber,req.body.moreinfo,req.body.address];
   var errors = [];
 
    console.log(req.body);
-   console.log(errors.length);
+   console.log(a);
 
    console.log(name);
      
 
-  if (!name || !email || !password || !password2) {
+  if (!name || !email || !password || !password2 || !gender || !birthday || !phone ||!address) {
     errors.push({ msg: 'Vui lòng nhập đầy đủ thông tin' });
   }
 
@@ -42,40 +46,66 @@ router.post('/register', (req, res) => {
     console.log(errors);
     res.render('admin/register', {
       errors,
-      name,
-      email,
-      password,
-      password2
+      data: req.body
     });
   } else {
-    User.findOne({ email: email }).then(user => {
-      if (user) {
+    Account.findOne({ email: email }).then(account => {
+      if (account) {
         errors.push({ msg: 'Email đã tồn tại. Vui lòng nhập email khác' });
         res.render('admin/register', {
           errors,
-          name,
-          email,
-          password,
-          password2
+          data : req.body
         });
       } else {
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var yyyy = today.getFullYear();
+        today = dd + '/' + mm + '/' + yyyy; 
+
+
         const newUser = new User({
-          name,
+          DisplayName : name,
+          ImageAvatar :' ',
+          Gender : gender,
+          DateOfBirth: birthday,
+          Phone :phone,
+          Email : email,
+          Address: address,
+          DateContact: today,
+          MoreInfo :moreinfo,
+          Role : '0'});
+
+
+        const newAccount = new Account({
+          idUser : newUser._id,
           email,
-          password
-        });
+          password,
+          verified : 'false'
+        })
+
+
+        console.log(newUser);
+        console.log(newAccount);
 
         bcrypt.genSalt(10, (err, salt) => {
-          bcrypt.hash(newUser.password, salt, (err, hash) => {
+          bcrypt.hash(newAccount.password, salt, (err, hash) => {
             if (err) throw err;
-            newUser.password = hash;
-            newUser
+            newAccount.password = hash;
+            newAccount
               .save()
               .then(user => {
                 req.flash(
                   'success_msg',
                   'Bạn đã đăng kí và có thể đăng nhập'
                 );
+
+            newUser.save(function(err,d){
+                    if(err){console.log(err)}
+                       else{
+                          console.log("create user successfully");
+                           }
+                      })
                 res.redirect('/auth/login');
               })
               .catch(err => console.log(err));
@@ -97,18 +127,7 @@ router.post('/login', (req, res, next) => {
 
 
 
-  router.get('/logout', (req, res) => {
-  req.logOut();
-
-  req.session.destroy(() => {
-    res
-    .clearCookie('connect.sid', {
-      path: '/admin',
-      httpOnly: true,
-    })
-    .sendStatus(200);
-  });
-  });
+  
 
 
 

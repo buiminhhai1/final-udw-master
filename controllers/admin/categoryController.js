@@ -1,4 +1,4 @@
-var Category = require('../../models/admin/user');
+var Category = require('../../models/user');
 // product
 /* GET users listing. */
 // category

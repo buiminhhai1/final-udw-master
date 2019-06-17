@@ -5,32 +5,35 @@
 				<div class="modal-header">
 					<h3>Cập nhật thông tin người dùng</h2>
 				</div>
+					<form action ="/admin/users" method="post">
 				<div class="modal-body ">
+				
 					<div class="form-row">
 						<div class="col-md-5">
 						  <label for="edit-user-id">Id </label>
-						  <input type="text" class="form-control" id="edit-user-id" value="US001" readonly/>
+						  <input type="text" class="form-control" id="edit-user-id" value="US001" name ="_id" readonly/>
 						</div>
-						<div class="col-md-7 col-mb-1">
+						<div lass="col-md-7 col-mb-1">
 						  <label for="edit-user-displayname">Họ tên</label>
-						  <input type="text" class="form-control" id="edit-user-displayname" value="Bùi Minh Hải" required/>
+						  <input type="text" class="form-control" id="edit-user-displayname" value="Bùi Minh Hải" name ="DisplayName" required/>
 						</div>
 					</div>
 					<div class="form-row">
 						<div class="col-md-12">
 						  <label for="edit-user-email">Email</label>
-						  <input type="text" class="form-control" id="edit-user-email" value="buiminhhaideptrai@gmail.com" readonly/>
+						  <input type="text" class="form-control" id="edit-user-email" value="buiminhhaideptrai@gmail.com" name = "Email" readonly/>
 						</div>
 					</div>
+
 					<div class="form-row">
 						<div class="col-md-7">
-						  <label for="edit-user-datebirth">Ngày sinh</label>
-						  <input type="date" class="form-control" id="edit-user-birthdate" value="" />
+						  <input type="text" class="form-control" id="edit-user-birthday" value=""  name="DateOfBirth" />
 						</div>
-						
+
+
 						<div class="col-md-5">
 						  <label for="edit-user-gender">Giới tính</label>
-							<select class="form-control" id="edit-user-gender">
+							<select class="form-control" id="edit-user-gender" name="Gender">
 							  <option>Nam</option>
 							  <option>Nữ</option>
 							  <option>Khác</option>
@@ -38,44 +41,49 @@
 						</div>
 					</div>
 					
+
 					<div class="form-row">
-						<div class="col-md-12">
-							<label for="edit-user-avatar">Thay đổi avatar</label>
-							<div class="custom-file">
-								<input type="file" class="custom-file-input" id="edit-user-avatar"/>
-								<label class="custom-file-label" for="edit-user-avatar">Choose file</label>
-							</div>
+						<div class="col-md-12">link ảnh</label>
+							<input type="text" class="form-control" id="edit-user-avatar" value="" name="ImageAvatar"/>
+						</div>
+					</div>
+
+					<div class="form-row">
+						<div class="col-md-12">Số điện thoại</label>
+							<input type="text" class="form-control" id="edit-user-phone" value="" name="Phone"/>
 						</div>
 					</div>
 					
 					<div class="form-row">
 						<div class="col-md-12">
 							<label for="edit-user-address">Địa chỉ</label>
-							<input type="text" class="form-control" id="edit-user-address" value="Bùi Minh Hải"/>
+							<input type="text" class="form-control" id="edit-user-address" value="" name="Address"/>
 						</div>
 					</div>
 					
 					<div class="form-row">
 						<div class="col-md-7">
 							<label for="edit-user-datecontact">Ngày hợp tác</label>
-							<input type="text" class="form-control" id="edit-user-datecontact" value="01-01-2019" readonly/>
+							<input type="text" class="form-control" id="edit-user-datecontact" value="01-01-2019" name ="DateContact" readonly/>
 						</div>
 					</div>
 					
 					<div class="form-row">
 						<div class="col-md-12">
 							<label for="edit-user-moreinfo">Thông tin khác</label>
-							 <textarea class="form-control" id="edit-user-moreinfo" value="he is so handsome and smart"></textarea>
+							 <input class="form-control" id="edit-user-moreinfo" value="Chưa cập nhật" name="MoreInfo"></input>
 						</div>
 					</div>
 					
 					
+					
 				</div>
 				<div class="modal-footer">
-					<button class="btn btn-default btn-primary" type="button" onclick="updateUserDetail()">Cập nhật</button>
-					<button class="btn btn-default btn-danger" type="button" onclick="deleteUser()">Xóa</button>
+					<button class="btn btn-default btn-primary" type="submit"  >Cập nhật</button>
+					<!-- <button class="btn btn-default btn-danger" type="button" onclick="deleteUser()">Xóa</button> -->
 					<button class='btn btn-default btn-dark' type ='button' data-dismiss="modal">Hủy bỏ</button>
 				</div>
+				</form>
 				<script>
 					function updateUserDetail(){
 						alert("Thông tin người dùng đã được cập nhật");
@@ -83,6 +91,11 @@
 					function deleteUser(){
 						alert("Người dùng đã bị xóa ra khỏi cở sở dữ liệu");
 					}
+
+
+
+
+
 					
 				</script>
 			</div>

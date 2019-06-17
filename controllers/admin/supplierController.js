@@ -1,4 +1,4 @@
-var Supplier = require('../../models/admin/supplier');
+var Supplier = require('../../models/supplier');
 // product
 /* GET users listing. */
 // supplier

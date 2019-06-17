@@ -3,25 +3,25 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 
 // Load User model
-const User = require('../models/User');
-
+// const Account = require('../models/account');
+const Account = require('../models/account');
 module.exports = function(passport) {
   passport.use(
     new LocalStrategy({ usernameField: 'email' }, (email, password, done) => {
       console.log(email);
       // Match user
-      User.findOne({
+      Account.findOne({
         email: email
-      }).then(user => {
-        if (!user) {
+      }).then(account => {
+        if (!account) {
           return done(null, false, { message: 'Email chưa được đăng ký' });
         }
 
         // Match password
-        bcrypt.compare(password, user.password, (err, isMatch) => {
+        bcrypt.compare(password, account.password, (err, isMatch) => {
           if (err) throw err;
           if (isMatch) {
-            return done(null, user);
+            return done(null, account);
           } else {
             return done(null, false, { message: 'Mật khẩu không đúng' });
           }
@@ -30,13 +30,16 @@ module.exports = function(passport) {
     })
   );
 
-  passport.serializeUser(function(user, done) {
-    done(null, user.id);
+  passport.serializeUser(function(account, done) {
+    done(null, account.id);
   });
 
   passport.deserializeUser(function(id, done) {
-    User.findById(id, function(err, user) {
-      done(err, user);
+    Account.findById(id, function(err, account) {
+      done(err, account);
     });
   });
 };
+
+
+

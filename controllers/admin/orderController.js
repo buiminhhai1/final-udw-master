@@ -1,4 +1,4 @@
-var Order = require('../../models/admin/order');
+var Order = require('../../models/order');
 // product
 // orders
 exports.orders = function(req, res, next) {

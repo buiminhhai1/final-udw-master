@@ -21,8 +21,11 @@ router.get('/', userController.userlist);
 
 router.get('/users',userController.userlist);
 router.get('/users/:id',userController.userdetail);
-// router.post('/users',userController.postuserlist);
+router.post('/users',userController.postuserlist);
 
+
+
+router.get('/master', userController.master);  
 
 
 
@@ -44,6 +47,7 @@ router.get('/suppliers/supplierdetail',supplierController.supplierdetail);
 
 router.get('/staffs',staffController.stafflist);
 router.get('/staffs/:id',staffController.staffdetail);
+router.post('/staffs',staffController.poststafflist)
 
 
 module.exports = router;

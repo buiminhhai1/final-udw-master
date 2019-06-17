@@ -1,4 +1,4 @@
-var Mobile = require('../../models/admin/mobile');
+var Mobile = require('../../models/mobile');
 // product
 
 
