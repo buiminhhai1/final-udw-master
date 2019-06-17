@@ -10,6 +10,12 @@ exports.mobile = function(req, res, next) {
 exports.camera = function(req, res, next) {
     res.render('customer/product/mobile', { title: 'Express' });
 };
+exports.laptop = function(req, res, next) {
+    res.render('customer/product/laptop', { title: 'Express' });
+};
+exports.tivi = function(req, res, next) {
+    res.render('customer/product/tivi', { title: 'Express' });
+};
 
 exports.products = function(req, res, next) {
     res.render('customer/products', { title: 'Express' });
