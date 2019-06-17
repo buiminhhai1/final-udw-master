@@ -9,10 +9,10 @@ var accountController = require('../controllers/customer/accountController');
 
 
 router.get('/', productController.index);  
-router.get('/mobile', productController.mobile);
-router.get('/camera', productController.camera);
-router.get('/laptop', productController.laptop);
-router.get('/tivi', productController.tivi);
+router.get('/product/mobile', productController.mobile); 
+router.get('/product/camera', productController.camera);
+router.get('/product/laptop', productController.laptop);
+router.get('/product/tivi', productController.tivi);
 
 
 router.get('/login',accountController.login);

@@ -5,10 +5,10 @@ exports.index = function(req, res, next) {
 };
 
 exports.mobile = function(req, res, next) {
-    res.render('customer/product/mobile', { title: 'Express' });
+    res.render('customer/product/mobile', { title: 'Express' }); 
 };
 exports.camera = function(req, res, next) {
-    res.render('customer/product/mobile', { title: 'Express' });
+    res.render('customer/product/camera', { title: 'Express' });
 };
 exports.laptop = function(req, res, next) {
     res.render('customer/product/laptop', { title: 'Express' });

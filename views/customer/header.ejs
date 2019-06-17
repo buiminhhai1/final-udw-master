@@ -1,6 +1,6 @@
 <%include head %>
 
-
+ 
 <!-- Navbar ================================================== -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="brand" href="./"><img src="customer/themes/images/logo.png" alt="Bootsshop"></a>
@@ -18,26 +18,32 @@
 		</li>
 	
       <li class="nav-item">
-        <a class="nav-link" href="#">Trang chủ <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/">Trang chủ <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Điện thoại</a>
+        <a class="nav-link" href="/product/mobile">Điện thoại</a>
       </li>
 	  <li class="nav-item">
-        <a class="nav-link" href="#">Laptop</a>
+        <a class="nav-link" href="/product/laptop">Laptop</a>
       </li>
 	  
 	  <li class="nav-item">
-        <a class="nav-link" href="#">Máy ảnh</a>
+        <a class="nav-link" href="/product/camera">Máy ảnh</a>
       </li>
 	  <li class="nav-item">
-        <a class="nav-link" href="#">Ti vi</a>
+        <a class="nav-link" href="/product/tivi">Ti vi</a>
       </li>
     </ul>
     <form class="form-inline">
-			<button class="btn btn-success my-btn-nav" type="button"><i class="fa fa-list"></i> Đơn hàng</button>
-			<button class="btn btn-success my-btn-nav" type="button"><i class="fa fa-cart-plus"></i> Giỏ hàng</button>
-			<button class="btn btn-success my-btn-nav" type="submit"><i class="fa fa-user"> </i> Đăng nhập</button>
+			<a href="/orders">
+				<button class="btn btn-success my-btn-nav" type="button"><i class="fa fa-list"></i> Đơn hàng</button>
+			</a>
+			<a href="/productsummary">
+				<button class="btn btn-success my-btn-nav" type="button"><i class="fa fa-cart-plus"></i> Giỏ hàng</button>
+			</a>
+			<a href="/auth/login">
+				<button class="btn btn-success my-btn-nav" type="button"><i class="fa fa-user"> </i> Đăng nhập</button>
+			</a>
 	</form>
   </div>
 </nav>
