@@ -1,24 +1,34 @@
-const mongoose = require('mongoose');
+var mongoose = require('mongoose');
 
-const UserSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: true
-  },
-  email: {
-    type: String,
-    required: true
-  },
-  password: {
-    type: String,
-    required: true
-  },
-  date: {
-    type: Date,
-    default: Date.now
-  }
+var Schema = mongoose.Schema;
+
+var UserSchema = new Schema({
+	DisplayName: String,
+    ImageAvatar: String,
+    Gender: String,
+    DateOfBirth: String,
+    Phone: String,
+    Email: String,
+    Address: String,
+    DateContact: String,
+	MoreInfo:String,
+	Role: Number
 });
 
-const User = mongoose.model('User', UserSchema,'users');
+// Virtual for this book instance URL.
+UserSchema
+.virtual('adminUrl')
+.get(function () {
+  return '/admin/users/'+this._id;
+});
 
-module.exports = User;
+
+ var data = mongoose.model('', UserSchema,'Users');
+
+//read data
+
+// data.find({}).exec(function(err,d){
+//     console.log(d);
+// })
+
+module.exports = data;

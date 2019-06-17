@@ -13,14 +13,15 @@ var router = express.Router();
 var expressSession = require('express-session');
 var bodyParser = require('body-parser');	
 const passport = require('passport');
+var bcrypt= require('bcrypt');
 require('./config/passport')(passport);
+var User = require('./models/user');
 const { ensureAuthenticated, forwardAuthenticated } = require('./config/auth');
 
 app.use(expressSession(
 	{secret: 'keyboard cat',
 	resave: true,
-    saveUninitialized: true,cookie: {maxAge: 1000 * 60 * 20}}));
-
+    saveUninitialized: true,cookie: {maxAge: 1000 * 60 * 60},HttpOnly:false}));
 
 
 app.use(passport.initialize());
@@ -60,18 +61,72 @@ db.once('open', function() {
 // });
 
  
-// db.collection("DonHang").insertOne({
-// 	MaDonHang: 'DH',
+// db.collection("DonHang").insert([
+//   {MaDonHang: 'DH',
 //     Owner: 'NguyenVanH',
 //     CMND: 'String',
 //     NgayMua: 'String',
-//     TongTien: 'String'
+//     TongTien: 'String'},
     
-// }, function(err, result) {
+    
+//     ], function(err, result) {
 //     if (err) throw err;
 //     console.log(result);
 //     db.close();
 //   });
+
+
+// db.collection("Users").insert(  
+//     , function(err, result) {
+//     if (err) throw err;
+//     console.log(result);
+//     db.close();
+//   });
+
+
+
+// const AccountSchema = new mongoose.Schema({
+//   idUser: {
+//     type: String,
+//     required: true
+//   },
+//   email: {
+//     type: String,
+//     required: true
+//   },
+//   password: {
+//     type: String,
+//     required: true
+//   },
+//   verified: {
+//     type: String,
+//     required: true
+//   }
+// });
+
+// const Account = mongoose.model('Accounts', AccountSchema,'Accounts');
+
+
+
+// const newAccount = new Account({
+//   idUser: '5d06a7f928c5c3062c19e30a',
+//   email: 'ndn@gmail.com',
+//   password: '123456', 
+//   verified:'true'});
+
+//         bcrypt.genSalt(10, (err, salt) => {
+//           bcrypt.hash(newAccount.password, salt, (err, hash) => {
+//             if (err) throw err;
+//             newAccount.password = hash;
+//             newAccount
+//               .save()
+//               .then(user => {
+//                 // res.redirect('/auth/login');
+//               })
+//               .catch(err => console.log(err));
+//           });
+//         });
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -87,13 +142,26 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/auth',forwardAuthenticated,authRouter);
 app.use('/admin',ensureAuthenticated,adminRouter);
 
+// app.use('/auth',authRouter);
 app.use('/', customerRouter);
 // app.use('/admin', adminRouter);
+
+app.use(function(req, res, next){
+  if(req.user){
+    User.find({_id : req.user.idUser}).exec(function(err,user){
+      res.locals.userDetail = user;
+      res.locals.userAccount = req.user;     
+    })
+  }
+  next();
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
 });
+
+
 
 // error handler
 app.use(function(err, req, res, next) {
