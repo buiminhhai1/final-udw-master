@@ -3,76 +3,109 @@
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h3>Thêm mới sản phẩm</h2>
+					<h3>Thêm sản phẩm</h2>
 				</div>
+					<form action ="/admin/products/new" method="post">
 				<div class="modal-body ">
-					<div class="form-row">
-						<div class="col-md-5">
-						  <label for="new-product-id">Id </label>
-						  <input type="text" class="form-control" id="new-product-id" value="US001" readonly/>
+							<!-- <div >
+						  <label for="edit-user-id">Id</label>
+						  <input type="text" class="form-control" id="edit-user-id" value="" name ="_id" readonly />
+						</div> -->
+
+						<div >
+						  <label for="edit-user-id">Id Product</label>
+						  <input type="text" class="form-control" id="edit-user-idproduct" value="" name ="IdProduct" required/>
 						</div>
-						<div class="col-md-7 col-mb-1">
-						  <label for="new-product-displayname">Tên sản phẩm</label>
-						  <input type="text" class="form-control" id="new-product-displayname" value="Bùi Minh Hải" required/>
-						</div>
-					</div>
-					<div class="form-row">
-						<div class="col-md-12">
-						  <label for="new-product-info">Thông tin chi tiết</label>
-						  <textarea class="form-control" id="new-product-info" value="he is so handsome and smart"></textarea>
-						</div>
-					</div>
-					<div class="form-row">
-						<div class="col-md-5">
-						  <label for="new-product-category">Loại sản phẩm</label>
-						  <select class="form-control" id="new-product-category">
-							<option>Điện thoại</option>
-							<option>Laptop</option>
-							<option>Máy ảnh</option>
-							</select>
-						  
-						</div>
+
 						
-						<div class="col-md-7">
-						  <label for="new-product-price">Giá</label>
-							<input type="text" class="form-control" id="new-product-price" value="" />
+						<div >
+						  <label for="edit-user-displayname">Tên sản phẩm</label>
+						  <input type="text" class="form-control" id="edit-user-displayname" value="" name ="DisplayName" required/>
+						</div>
+					
+						<div >
+						  <label for="edit-user-id"> Nhà cung cấp</label>
+						  <input type="text" class="form-control" id="edit-user-supplier" value="" name ="Supplier" required/>
+						</div>
+						<div >
+						  <label for="edit-user-displayname">Thể loại</label>
+						  <input type="text" class="form-control" id="edit-user-idcategory" value="" name ="IdCategory" required/>
+						</div>
+					
+					<div class="form-row">
+						<div class="col-md-12">
+						  <label for="edit-user-email">Giá</label>
+						  <input type="text" class="form-control" id="edit-user-price" value="" name = "Price"required />
+						</div>
+					</div>
+
+					
+
+
+					<div class="form-row">
+						<div class="col-md-12">
+						  <label for="edit-user-email">Link hình ảnh đại diện</label>
+						  <input type="text" class="form-control" id="edit-user-imageavatar" value="" name = "ImageAvatar" required/>
+						</div>
+					</div>
+
+
+					<div class="form-row">
+						<div class="col-md-12">
+						  <label for="edit-user-email">Link hình ảnh chi tiết</label>
+						  <input type="text" class="form-control" id="edit-user-imageinfo" value="" name = "ImageInfo" required/>
+						</div>
+					</div>
+
+					<div class="form-row">
+						<div class="col-md-5">Thiết kế</label>
+							<input type="text" class="form-control" id="edit-user-thietke" value="" name="thietke"/>
+						</div>
+					</div>
+					
+
+
+					<div class="form-row">
+						<div class="col-md-12">Hiển Thi</label>
+							<input type="text" class="form-control" id="edit-user-hienthi" value="" name="HienThi"/>
+						</div>
+					</div>
+
+					<div class="form-row">
+						<div class="col-md-12">Cấu hình</label>
+							<input type="text" class="form-control" id="edit-user-cauhinh" value="" name="CauHinh"/>
 						</div>
 					</div>
 					
 					<div class="form-row">
 						<div class="col-md-12">
-							<label for="new-product-avatar">Thay đổi avatar</label>
-							<div class="custom-file">
-								<input type="file" class="custom-file-input" id="new-product-avatar"/>
-								<label class="custom-file-label" for="new-product-avatar">Choose file</label>
-							</div>
+							<label for="edit-user-address">Khác</label>
+							<input type="text" class="form-control" id="edit-user-khac" value="" name="Khac"/>
 						</div>
 					</div>
 					
 					
-					<div class="form-row">
-						<div class="col-md-12">
-							<label for="new-product-avatar">Thay đổi ảnh mô tả</label>
-							<div class="custom-file">
-								<input type="file" class="custom-file-input" id="new-product-imageinfo"/>
-								<label class="custom-file-label" for="new-product-imageinfo">Choose file</label>
-							</div>
-						</div>
-					</div>
+										
 					
 				</div>
 				<div class="modal-footer">
-					<button class="btn btn-default btn-primary" type="button" onclick="updateProductDetail()">Thêm mới</button>
-					<button class="btn btn-default btn-danger" type="button" onclick="deleteProduct()">Xóa</button>
+					<button class="btn btn-default btn-primary" type="submit"  >Thêm</button>
+					<!-- <button class="btn btn-default btn-danger" type="button" onclick="deleteUser()">Xóa</button> -->
 					<button class='btn btn-default btn-dark' type ='button' data-dismiss="modal">Hủy bỏ</button>
 				</div>
+				</form>
 				<script>
-					function updateProductDetail(){
-						alert("Thông tin sản phẩm đã được cập nhật");
+					function updateUserDetail(){
+						alert("Thông tin người dùng đã được cập nhật");
 					}
-					function deleteProduct(){
-						alert("Sản phẩm đã bị xóa ra khỏi cở sở dữ liệu");
+					function deleteUser(){
+						alert("Người dùng đã bị xóa ra khỏi cở sở dữ liệu");
 					}
+
+
+
+
+
 					
 				</script>
 			</div>
@@ -80,4 +113,3 @@
 		</div>
 
 	</div>
-				

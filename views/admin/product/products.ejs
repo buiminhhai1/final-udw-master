@@ -47,7 +47,7 @@
 									<table id="my-table" class="table">
 										<thead class="my-title-table">
 												<tr>
-													<th>Mã sản phẩm</th>
+													<th>Mã SP</th>
 													<th>Tên sản phẩm</th>
 													<th>Hình</th>
 													<th>Giá</th>
@@ -58,179 +58,20 @@
 										</thead>
 											
 										<tbody class="my-table-body">
+											<% products.forEach(function(product,i){ %>
+
 												<tr>
-													<th>Mã sản phẩm</th>
-													<th>Tên sản phẩm</th>
-													<th>Hình</th>
-													<th>Giá</th>
-													<th>Mã loại</th>
+													<th>"<%=product.IdProduct%></th>
+													<th><%=product.DisplayName%></th>
+													<th><img src="<%=product.ImageAvatar%>" width="70" height="70"></th>
+													<th><%=product.Price%></th>
+													<th><%=product.IdCategory%></th>
 											   
 											  
-											   <td><button type="button" class="my-table-btn btn btn-primary">Chi tiết</button></td>
-											   <td><button type="button" class="btn btn-primary my-button"data-toggle="modal" data-target="#my-product-dialog-edit">Chỉnh sửa</button></td>
+											   <td><button type="button" onclick="location.href='/admin/products/<%=product._id%>'" class="my-table-btn btn btn-primary">Chi tiết</button></td>
+											   <td><button type="button" onclick = "pp(id)" id ="<%=product._id%>" class="btn btn-primary my-button"data-toggle="modal" data-target="#my-product-dialog-edit">Chỉnh sửa</button></td>
 											</tr>
-												<tr>
-											
-											   <th>Mã sản phẩm</th>
-											<th>Tên sản phẩm</th>
-											<th>Hình</th>
-											<th>Giá</th>
-											<th>Mã loại</th>
-											<td><button type="button" class="my-table-btn btn btn-primary">Chi tiết</button></td>
-											 
-											   <td><button type="button" class="btn btn-primary my-button"data-toggle="modal" data-target="#my-product-dialog-edit">Chỉnh sửa</button></td>
-											</tr>
-												<tr>
-											
-											   <th>Mã sản phẩm</th>
-											<th>Tên sản phẩm</th>
-											<th>Hình</th>
-											<th>Giá</th>
-											<th>Mã loại</th>
-											<td><button type="button" class="my-table-btn btn btn-primary">Chi tiết</button></td>
-											  
-											<td><button type="button" class="my-table-btn btn btn-primary">Chỉnh sửa</button></td>
-											</tr>
-											<tr>
-											
-											   <th>Mã sản phẩm</th>
-											<th>Tên sản phẩm</th>
-											<th>Hình</th>
-											<th>Giá</th>
-											<th>Mã loại</th>
-											<td><button type="button" class="my-table-btn btn btn-primary">Chi tiết</button></td>
-											  
-											<td><button type="button" class="my-table-btn btn btn-primary">Chỉnh sửa</button></td>
-											</tr>
-											
-												
-											   <th>Mã sản phẩm</th>
-											<th>Tên sản phẩm</th>
-											<th>Hình</th>
-											<th>Giá</th>
-											<th>Mã loại</th>
-											<td><button type="button" class="my-table-btn btn btn-primary">Chi tiết</button></td>
-											  
-											<td><button type="button" class="my-table-btn btn btn-primary">Chỉnh sửa</button></td>
-											</tr>
-												<tr>
-											
-											   <th>Mã sản phẩm</th>
-											<th>Tên sản phẩm</th>
-											<th>Hình</th>
-											<th>Giá</th>
-											<th>Mã loại</th>
-											<td><button type="button" class="my-table-btn btn btn-primary">Chi tiết</button></td>
-											  
-											<td><button type="button" class="my-table-btn btn btn-primary">Chỉnh sửa</button></td>
-											</tr>
-											<tr>
-											
-											   <th>Mã sản phẩm</th>
-											<th>Tên sản phẩm</th>
-											<th>Hình</th>
-											<th>Giá</th>
-											<th>Mã loại</th>
-											<td><button type="button" class="my-table-btn btn btn-primary">Chi tiết</button></td>
-											  
-											<td><button type="button" class="my-table-btn btn btn-primary">Chỉnh sửa</button></td>
-											</tr>
-												
-											   <th>Mã sản phẩm</th>
-											<th>Tên sản phẩm</th>
-											<th>Hình</th>
-											<th>Giá</th>
-											<th>Mã loại</th>
-											<td><button type="button" class="my-table-btn btn btn-primary">Chi tiết</button></td>
-											  
-											<td><button type="button" class="my-table-btn btn btn-primary">Chỉnh sửa</button></td>
-											</tr>
-												<tr>
-											
-											   <th>Mã sản phẩm</th>
-											<th>Tên sản phẩm</th>
-											<th>Hình</th>
-											<th>Giá</th>
-											<th>Mã loại</th>
-											<td><button type="button" class="my-table-btn btn btn-primary">Chi tiết</button></td>
-											  
-											<td><button type="button" class="my-table-btn btn btn-primary">Chỉnh sửa</button></td>
-											</tr>
-											<tr>
-											
-											   <th>Mã sản phẩm</th>
-											<th>Tên sản phẩm</th>
-											<th>Hình</th>
-											<th>Giá</th>
-											<th>Mã loại</th>
-											<td><button type="button" class="my-table-btn btn btn-primary">Chi tiết</button></td>
-											  
-											<td><button type="button" class="my-table-btn btn btn-primary">Chỉnh sửa</button></td>
-											</tr>
-												
-											   <th>Mã sản phẩm</th>
-											<th>Tên sản phẩm</th>
-											<th>Hình</th>
-											<th>Giá</th>
-											<th>Mã loại</th>
-												<td><button class="my-table-btn btn btn-primary">Chi tiết</button></td>
-											  
-											   <td><button class="my-table-btn btn btn-primary">Chỉnh sửa</button></td>
-											</tr>
-												<tr>
-											
-											   <th>Mã sản phẩm</th>
-											<th>Tên sản phẩm</th>
-											<th>Hình</th>
-											<th>Giá</th>
-											<th>Mã loại</th>
-												  <td><button class="my-table-btn btn btn-primary">Chi tiết</button></td>
-											  
-											   <td><button class="my-table-btn btn btn-primary">Chỉnh sửa</button></td>
-											</tr>
-											<tr>
-											
-											   <th>Mã sản phẩm</th>
-											<th>Tên sản phẩm</th>
-											<th>Hình</th>
-											<th>Giá</th>
-											<th>Mã loại</th>
-											<td><button class="my-table-btn btn btn-primary">Chi tiết</button></td>
-											  
-											   <td><button class="my-table-btn btn btn-primary">Chỉnh sửa</button></td>
-											</tr>
-												
-											   <th>Mã sản phẩm</th>
-											<th>Tên sản phẩm</th>
-											<th>Hình</th>
-											<th>Giá</th>
-											<th>Mã loại</th>
-												<td><button class="my-table-btn btn btn-primary">Chi tiết</button></td>
-											  
-											   <td><button class="my-table-btn btn btn-primary">Chỉnh sửa</button></td>
-											</tr>
-												<tr>
-											
-											   <th>Mã sản phẩm</th>
-											<th>Tên sản phẩm</th>
-											<th>Hình</th>
-											<th>Giá</th>
-											<th>Mã loại</th>
-												  <td><button class="my-table-btn btn btn-primary">Chi tiết</button></td>
-											  
-											   <td><button class="my-table-btn btn btn-primary">Chỉnh sửa</button></td>
-											</tr>
-											<tr>
-											
-											   <th>Mã sản phẩm</th>
-											<th>Tên sản phẩm</th>
-											<th>Hình</th>
-											<th>Giá</th>
-											<th>Mã loại</th>
-											<td><button class="my-table-btn btn btn-primary">Chi tiết</button></td>
-											  
-											   <td><button class="my-table-btn btn btn-primary">Chỉnh sửa</button></td>
-											</tr>
+												<% }); %>	
 													
 										</tbody>
 
@@ -242,6 +83,47 @@
 														"iDisplayLength": 5
 													});
 												});
+
+												function pp(dd){
+															$.ajax({
+													        url: '/admin/products',
+													        method: 'post',
+													    	data: {
+										                    id : dd
+										              		},
+										                timeout: 5000,
+										                complete: function() {
+										                  //called when complete
+										                  console.log('process complete');
+										                },
+
+										                success: function(data) {
+										                  console.log(data._id);
+
+										                  console.log('process sucess');
+										                   $('#edit-user-id').attr('value',data._id);
+										                  $('#edit-user-idproduct').attr('value',data.IdProduct);
+										                  $('#edit-user-displayname').attr('value',data.DisplayName);
+										                  $('#edit-user-supplier').attr('value',data.Supplier);
+										                  $('#edit-user-thietke').attr('value',data.Info.thietke);
+										                  $('#edit-user-hienthi').attr('value',data.Info.HienThi);
+										                  $('#edit-user-imageavatar').attr('value',data.ImageAvatar);
+
+										                  $('#edit-user-imageinfo').attr('value',data.ImageInfo.toString());
+										                  $('#edit-user-price').attr('value',data.Price);
+										                  $('#edit-user-idcategory').attr('value',data.IdCategory);
+										                  $('#edit-user-cauhinh').attr('value',data.Info.CauHInh.toString());
+										                  $('#edit-user-khac').attr('value',data.Info.Khac.toString());
+										                  
+										                  
+										               },
+
+										                error: function() {
+										                  console.log('process error');
+										                },
+										              });}
+
+
 										</script>
 
 									</form>

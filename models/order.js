@@ -3,12 +3,13 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var OrderSchema = new Schema({
-	MaDonHang: String,
-    Owner: String,
-    CMND: String,
+	OrderNumber: String,
+    UserID: String,
     NgayMua: String,
-    TongTien: String,
-    
+    state: String,
+    PhoneReceiver: String,
+    AddressReceiver: String,
+    TotalAmount : Number
 });
 
 // Virtual for this book instance URL.
@@ -26,4 +27,4 @@ OrderSchema
 //       });
 
 
-module.exports = mongoose.model('Order', OrderSchema,'DonHang');
+module.exports = mongoose.model('Orders', OrderSchema,'Orders');

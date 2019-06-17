@@ -42,6 +42,7 @@ exports.poststafflist = function(req, res, next) {
 					data.Address = temp.Address;
 					data.DateContact = temp.DateContact;
 					data.MoreInfo = temp.MoreInfo;
+					data.Role = temp.Role;
 
 					data.save(function(err,d){
 						if(err){
