@@ -21,7 +21,7 @@ const { ensureAuthenticated, forwardAuthenticated } = require('./config/auth');
 app.use(expressSession(
 	{secret: 'keyboard cat',
 	resave: true,
-    saveUninitialized: true,cookie: {maxAge: 1000 * 60 * 60},HttpOnly:false}));
+    saveUninitialized: true,cookie: {maxAge: 1000 * 60 * 120},HttpOnly:false}));
 
 
 app.use(passport.initialize());
@@ -61,15 +61,9 @@ db.once('open', function() {
 // });
 
  
-// db.collection("DonHang").insert([
-//   {MaDonHang: 'DH',
-//     Owner: 'NguyenVanH',
-//     CMND: 'String',
-//     NgayMua: 'String',
-//     TongTien: 'String'},
-    
-    
-//     ], function(err, result) {
+// db.collection("OrderItems").insert(   
+
+//     , function(err, result) {
 //     if (err) throw err;
 //     console.log(result);
 //     db.close();

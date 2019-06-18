@@ -2,25 +2,24 @@ var mongoose = require('mongoose');
 
 var Schema = mongoose.Schema;
 
-var MobileSchema = new Schema({
-	MaMobile: String,
-    Name: String,
-    Price: String,
-    ManHinh: String,
-    CamTruoc: String,
-    CamSau: String,
-    Ram: String,
-    BoNhoTrong: String,
-    CPU: String,
-    GPU: String,
-    Pin: String,
-    HDH: String,
-    Sim: String,
-    Hinh: String
+var ProductSchema = new Schema({
+    IdProduct :String,
+    DisplayName:String,
+    Supplier:String,
+    ImageAvatar:String,
+    Price:Number,
+    IdCategory:String,
+    ImageInfo: [String],
+    Info: {
+        thietke: String,
+        HienThi:String,
+        CauHInh:[String],
+        Khac:[String]
+    }
 });
 
 // Virtual for this book instance URL.
-MobileSchema
+ProductSchema
 .virtual('adminUrl')
 .get(function () {
   return '/admin/products/'+this._id;
@@ -34,4 +33,4 @@ MobileSchema
 //       });
 
 
-module.exports = mongoose.model('Mobile', MobileSchema,'Mobile');
+module.exports = mongoose.model('Products', ProductSchema,'Products');

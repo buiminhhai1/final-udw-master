@@ -2,19 +2,19 @@ var mongoose = require('mongoose');
 
 var Schema = mongoose.Schema;
 
-var UserSchema = new Schema({
-	Ten: String,
-    CMND: String,
-    NgaySinh: String,
-    DiaChi: String,
-    SDT: String,
-    Hinh: String,
-    TenTaiKhoan: String,
-    MatKhau: String
+var SupplierSchema = new Schema({
+	IdSupplier: String,
+    DisplayName: String,
+    ImageAvatar: String,
+    Phone: String,
+    Email: String,
+    Address: String,
+    DateContact: String,
+    MoreInfo: String
 });
 
 // Virtual for this book instance URL.
-UserSchema
+SupplierSchema
 .virtual('adminUrl')
 .get(function () {
   return '/admin/supplier/'+this._id;
@@ -22,4 +22,4 @@ UserSchema
 
 
 
-module.exports = mongoose.model('Supplier', UserSchema,'NhaCungCap');
+module.exports = mongoose.model('Suppliers', SupplierSchema,'Suppliers');
