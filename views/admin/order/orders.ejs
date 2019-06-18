@@ -10,7 +10,7 @@
        <div id="wrapper">
             <%include ../sidebar%>
            <%include editorderdialog%>
-		  <%include neworderdialog%>
+	
           <div class="content-wrapper">
                 <div class="content custom-scrollbar ps ps--active-y">
                     <div >
@@ -24,7 +24,7 @@
 									<div class="row align-items-center my-table-title">
 											<div class="col">
 												<div>
-													<a href="#" ><h3 class="mycustom-title">Danh hóa đơn</h3></a>
+													<a href="#" ><h3 class="mycustom-title">Danh sách hóa đơn</h3></a>
 												</div>
 												
 											</div>
@@ -32,10 +32,10 @@
 											<div class="col-auto">
 												<div class="row align-items-center justify-content-end">		
 													<div class="user-menu-button">
-														<div>
-															<button type="button" class="btn btn-primary my-button"data-toggle="modal" data-target="#my-order-dialog-new">Thêm mới</button>
+													<!-- 	<div>
+															<button onclick="pp(id)" type="button" class="btn btn-primary my-button"data-toggle="modal" data-target="#my-order-dialog-new">Thêm mới</button>
 
-														</div>
+														</div> -->
 													</div>
 												</div>
 											</div>
@@ -49,54 +49,27 @@
 												<tr>
 													<th>Mã Hóa đơn</th>
 													<th>Ngày mua</th>
-													<th>Người Mua</th>
+													<th>Người mua</th>
 													<th>Tổng Tiền</th>
-													<th>Xem chi tiết</th>
+													<th>Trạng thái</th>
+													<!-- <th>Xem chi tiết</th> -->
 													<th>Chỉnh Sửa</th>
 												</tr>
 											</thead>
-												<tbody class="my-table-body">
+												<tbody class="my-table-body">															<% orders.forEach(function(data,i){ %>
+
 														<tr>
-															<th>Mã Hóa đơn</th>
-													<th>Ngày mua</th>
-													<th>Người Mua</th>
-													<th>Tổng Tiền</th>
-													   <td><button type="button" class="my-table-btn btn btn-primary">Chi tiết</button></td>
-													  
-													   <td><button type="button" class="btn btn-primary my-button"data-toggle="modal" data-target="#my-order-dialog-edit">Cập nhật</button></td>
+															<th><%=data.OrderNumber%></th>
+													<th><%=data.NgayMua%></th>
+													<th><%=data.UserID%></th>
+													<th><%=data.TotalAmount%></th>
+													<th><%=data.state%></th>
+													   <!-- <td><button type="button" class="my-table-btn btn btn-primary">Chi tiết</button></td>
+													   -->
+													   <td><button type="button" id="<%=data._id%>" class="btn btn-primary my-button"data-toggle="modal"onclick="pp(id)" data-target="#my-order-dialog-edit">Cập nhật</button></td>
 													</tr>
-														<tr>
-													
-													   <th>Mã Hóa đơn</th>
-													<th>Ngày mua</th>
-													<th>Người Mua</th>
-													<th>Tổng Tiền</th>
-														   <td><button type="button" class="my-table-btn btn btn-primary">Chi tiết</button></td>
-													  
-													   <td><button type="button" class="btn btn-primary my-button"data-toggle="modal" data-target="#my-order-dialog-edit">Cập nhật</button></td>
-													</tr>
-														<tr>
-													
-													   <th>Mã Hóa đơn</th>
-													<th>Ngày mua</th>
-													<th>Người Mua</th>
-													<th>Tổng Tiền</th>
-														   <td><button type="button" class="my-table-btn btn btn-primary">Chi tiết</button></td>
-													  
-													   <td><button type="button" class="btn btn-primary my-button"data-toggle="modal" data-target="#my-order-dialog-edit">Cập nhật</button></td>
-													</tr>
-													<tr>
-													
-													  <th>Mã Hóa đơn</th>
-													<th>Ngày mua</th>
-													<th>Người Mua</th>
-													<th>Tổng Tiền</th>
-													
-													<td><button class="my-table-btn btn btn-primary">Chi tiết</button></td>
-													  
-													   <td><button class="my-table-btn btn btn-primary">Chỉnh sửa</button></td>
-													</tr>
-													
+														
+													<%})%>
 													
 												</tbody>
 
@@ -108,6 +81,33 @@
 														"iDisplayLength": 5
 													});
 												});
+
+												function pp(dd){
+															$.ajax({
+													        url: '/admin/orders',
+													        method: 'post',
+													    	data: {
+										                    id : dd
+										              		},
+										                timeout: 5000,
+										                complete: function() {
+										                  //called when complete
+										                  console.log('process complete');
+										                },
+
+										                success: function(data) {
+										                  console.log(data._id);
+										                  console.log('process sucess');
+										                  
+										                  $('#new-order-state').attr('value',data.state);
+										                  $('#new-order-ordernumber').attr('value',data.OrderNumber);
+										                  
+										               },
+
+										                error: function() {
+										                  console.log('process error');
+										                },
+										              });}
 										</script>
 
 									</form>

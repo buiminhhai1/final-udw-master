@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-
+const { ensureAuthenticated, forwardAuthenticated } = require('../config/auth');
 var checkoutController = require('../controllers/customer/checkoutController');
 var productController = require('../controllers/customer/productController');
 var userController = require('../controllers/customer/userController');
@@ -21,7 +21,12 @@ router.get('/register',accountController.register);
 router.get('/forgetpass',accountController.forgetpass);
 
 
-router.get('/updateinfo',userController.updateinfo);
+router.get('/updateinfo',ensureAuthenticated,userController.updateinfo);
+router.post('/updateinfo',userController.postupdateinfo);
+
+router.get('/changepassword',ensureAuthenticated,accountController.changepassword);
+router.post('/changepassword',accountController.postchangepassword);
+
 router.get('/orders',userController.orders);
 
 router.get('/payment',checkoutController.payment);

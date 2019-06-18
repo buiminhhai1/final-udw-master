@@ -134,11 +134,11 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/auth',forwardAuthenticated,authRouter);
-app.use('/admin',ensureAuthenticated,adminRouter);
+// app.use('/admin',ensureAuthenticated,adminRouter);
 
 // app.use('/auth',authRouter);
 app.use('/', customerRouter);
-// app.use('/admin', adminRouter);
+app.use('/admin', adminRouter);
 
 app.use(function(req, res, next){
   if(req.user){

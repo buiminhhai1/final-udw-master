@@ -34,6 +34,7 @@ router.get('/products/:id',productController.productdetail);
 
 router.get('/orders',orderController.orders);
 router.get('/orders/:id',orderController.orderdetail);
+router.post('/orders',orderController.postorderlist);
 
 router.get('/salesfigures',salesfigureController.salesfigures);
 
