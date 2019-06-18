@@ -13,7 +13,8 @@ router.get('/mobile', productController.mobile);
 router.get('/camera', productController.camera);
 router.get('/laptop', productController.laptop);
 router.get('/tivi', productController.tivi);
-
+router.get('/product',productController.product);
+router.get('/productdetail',productController.productdetail);
 
 router.get('/login',accountController.login);
 router.get('/register',accountController.register);
@@ -28,8 +29,7 @@ router.get('/shipping',checkoutController.shipping);
 router.get('/productsummary',checkoutController.productsummary);
 
 
-router.get('/products',productController.products);
-router.get('/product_details',productController.productdetail);
+
 
 router.get('/logout', (req, res) => {
   req.logOut();

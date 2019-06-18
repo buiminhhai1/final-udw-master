@@ -1,6 +1,13 @@
 <%include head %>
-
-
+  <style>
+  .badge-notify{
+    background:red;
+    position:relative;
+    top: -20px;
+    right: 10px;
+  
+  }
+  </style>
 <!-- Navbar ================================================== -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="brand" href="./"><img src="customer/themes/images/logo.png" alt="Bootsshop"></a>
@@ -18,26 +25,27 @@
 		</li>
 	
       <li class="nav-item">
-        <a class="nav-link" href="#">Trang chủ <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/">Trang chủ <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Điện thoại</a>
+        <a class="nav-link" href="/mobile">Điện thoại</a>
       </li>
 	  <li class="nav-item">
-        <a class="nav-link" href="#">Laptop</a>
+        <a class="nav-link" href="/laptop">Laptop</a>
       </li>
 	  
 	  <li class="nav-item">
-        <a class="nav-link" href="#">Máy ảnh</a>
+        <a class="nav-link" href="/camera">Máy ảnh</a>
       </li>
 	  <li class="nav-item">
-        <a class="nav-link" href="#">Ti vi</a>
+        <a class="nav-link" href="/tivi">Ti vi</a>
       </li>
     </ul>
     <form class="form-inline">
-			<button class="btn btn-success my-btn-nav" type="button"><i class="fa fa-list"></i> Đơn hàng</button>
-			<button class="btn btn-success my-btn-nav" type="button"><i class="fa fa-cart-plus"></i> Giỏ hàng</button>
-			<button class="btn btn-success my-btn-nav" type="submit"><i class="fa fa-user"> </i> Đăng nhập</button>
+			<a href="/orders"><button class="btn btn-success my-btn-nav" type="button"><i class="fa fa-list"></i> Đơn hàng</button></a>
+			<a href="productsummary"><button class="btn btn-success my-btn-nav" type="button">
+			<i id="my-cart-icon" class="fa fa-cart-plus"></i> Giỏ hàng<span class="badge badge-danger my-cart-badge">3</span></button></a>
+			<a href="/admin"><button  class="btn btn-success my-btn-nav" type="button"><i class="fa fa-user"> </i> Đăng nhập</button></a>
 	</form>
   </div>
 </nav>

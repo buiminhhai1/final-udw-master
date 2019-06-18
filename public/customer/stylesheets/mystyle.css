@@ -145,10 +145,35 @@ body{
 	color: #4000FF !important;
 }
 .product-title{
-	padding: 10px;
+	padding: 20px;
 	background-color: #333333;
 	color: white;
-	margin:10px;
+	margin:20px;
 	border-radius: 5px;	
+	
+}
+
+.product-detail-title{
+padding: 20px;
+	background-color: #333333;
+	color: white;
+	margin:20px;
+	border-radius: 5px;	
+	
+}
+
+.my-product-title{
+	
+	
+}
+
+.my-product-detail{
+	
+	
+}
+.my-product-price{
+	
+}
+.my-product-supplier{
 	
 }
